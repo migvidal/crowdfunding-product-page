@@ -1,3 +1,16 @@
+/* img */
+#projects img {
+	border-radius: 10px;
+}
+#projects a img {
+	transition: transform 0.2s ease-in-out,
+				box-shadow 0.2s ease-in-out;
+}
+#projects a img:hover {
+    transform: scale(1.01);
+    box-shadow: 0 10px 12px 5px rgba(0, 0, 0, 0.2);
+}
+
 /* colors */
 .vue-color {
 	color: #3fb984;
@@ -12,6 +25,7 @@
 .separator {
 	height: .3em;
 }
+
 
 /* gradient */
 
