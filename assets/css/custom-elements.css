@@ -21,7 +21,7 @@ footer {
 }
 #projects a img:hover {
     transform: scale(1.01);
-    box-shadow: 0 10px 12px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 10px 2px rgba(0, 0, 0, 0.103);
 }
 
 
@@ -49,6 +49,7 @@ footer {
 	-webkit-animation: gradient 15s ease infinite;
 	        animation: gradient 15s ease infinite;
 }
+
 
 @-webkit-keyframes gradient {
 	0% {
