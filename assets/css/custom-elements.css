@@ -1,4 +1,17 @@
+/* footer */
+footer {
+	position: relative;
+	bottom: 0;
+}
+
 /* img */
+#miguelogo {
+	margin: 0 auto;
+	margin-bottom: 2em;
+	display: block;
+	width: 100px;
+	opacity: 0.5;
+}
 #projects img {
 	border-radius: 10px;
 }
@@ -10,6 +23,7 @@
     transform: scale(1.01);
     box-shadow: 0 10px 12px 5px rgba(0, 0, 0, 0.2);
 }
+
 
 /* colors */
 .vue-color {
