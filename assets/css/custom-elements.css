@@ -10,7 +10,7 @@ footer {
 }
 .flex-container {
 	display: flex;
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 }
 .flex-element  h1 {
 	white-space: nowrap;
