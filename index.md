@@ -8,4 +8,4 @@ title: Soy Miguel Vidal
 # Con experiencia en <span class="wp-color">Wordpress</span> y <span class="shopify-color">Shopify</span>.
 
 <br>
-# [Mi portfolio](/portfolio) · [GitHub](https://github.com/migvidal/) · [LinkedIn](https://www.linkedin.com/in/miguel-vidal-funcia-121035167/)
+# [Mi portfolio](/portfolio.md) · [GitHub](https://github.com/migvidal/) · [LinkedIn](https://www.linkedin.com/in/miguel-vidal-funcia-121035167/)
