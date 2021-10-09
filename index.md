@@ -4,7 +4,7 @@ title: Soy Miguel Vidal
 ---
 
 
-# Desarrollador web front-end
+## Desarrollador web front-end
 ## Con experiencia en <span class="wp-color">Wordpress</span> y <span class="shopify-color">Shopify</span>.
 
 <br>
