@@ -6,6 +6,7 @@ footer {
 
 /* column layout */
 .inner {
+	width: unset;
 	max-width: 90%;
 }
 .flex-container {
