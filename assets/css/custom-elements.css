@@ -14,6 +14,9 @@ footer {
 	justify-content: center;
 	margin: 1em 0;
 }
+.flex-item:nth-child(2) {
+	flex-basis: 60%;
+}
 .flex-item header {
 	padding: 0;
 }
