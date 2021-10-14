@@ -11,4 +11,13 @@ title: Mis proyectos
 
 [Github](https://github.com/migvidal/dimensional) · [Web](http://dimensional3.000webhostapp.com/)
 
-# [Volver](./)
+
+## VidalWP
+
+**Tema WordPress básico y elegante. Estilos mediante Bootstrap y Sass.**
+
+[![VidalWP](assets/images/projects/vidalwp-poster.png)](https://github.com/migvidal/vidalwp)
+
+[Github](https://github.com/migvidal/vidalwp)
+
+**[&#8592; Volver](./)**
