@@ -9,7 +9,7 @@ title: Mis proyectos
 
 [![Dimensional](assets/images/projects/dimensional-poster.png)](http://dimensional3.000webhostapp.com/)
 
-[Github](https://github.com/migvidal/dimensional) · [Web](http://dimensional3.000webhostapp.com/)
+[Github](https://github.com/migvidal/dimensional)
 
 
 ## VidalWP
