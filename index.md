@@ -12,5 +12,6 @@ title: Soy Miguel Vidal
 [Mi portfolio](/portfolio) · [GitHub](https://github.com/migvidal/) · [LinkedIn](https://www.linkedin.com/in/miguel-vidal-funcia-121035167/)
 
 <br>
+
 **[View in English](/portfolio-en)**
 
