@@ -5,7 +5,7 @@ title: My projects
 
 ## Dimensional
 
-**A place to explore and upload 3d models. Web app based on PHP. Final project for my Web Development technical degree.**
+**A place to explore and upload 3d models. PHP powered web app. Final project for my Web Development technical degree.**
 
 [![Dimensional](assets/images/projects/dimensional-poster.png)](http://dimensional3.000webhostapp.com/)
 
