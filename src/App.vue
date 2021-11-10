@@ -17,16 +17,13 @@ export default {
 </script>
 
 <style lang="scss">
+@import "./assets/reset.css";
 body {
-  font-family: 'Commissioner', sans-serif;
+  font-family: "Commissioner", sans-serif;
 }
 #app {
-  background-color: $dark-gray;
-  /* font-family: Avenir, Helvetica, Arial, sans-serif;
+  //background-color: rgb(125, 150, 89);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px; */
 }
 </style>

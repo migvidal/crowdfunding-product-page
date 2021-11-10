@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <main class="home">
     <!-- header -->
     <header class="header">
       <h1>Mastercraft Bamboo Monitor Riser</h1>
@@ -7,8 +7,8 @@
         A beautiful & handcrafted monitor stand to reduce neck and eye strain
       </p>
       <button>Back this project</button>
+      <button>Bookmark/Bookmarked</button>
     </header>
-    <button>Bookmark/Bookmarked</button>
     <!-- stats -->
     <CFStats />
 
@@ -30,7 +30,7 @@
       <button @click="this.showModal = !this.showModal">Toggle Modal</button>
       <pledge-modal v-show="this.showModal" :rewards="this.rewards" />
     </section>
-  </div>
+  </main>
 </template>
 
 <script>
@@ -91,21 +91,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-@use "../assets/reset.css";
-@use "../assets/variables.scss";
-
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+main.home {
+  background-color: $dark-gray;
+  & > * {
+    //mixin?
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: .5rem;
+    background-color: #fff;
+  }
 }
 </style>
