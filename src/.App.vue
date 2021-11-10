@@ -1,22 +1,17 @@
 <template>
-  <CFNav />
-  <CrowdfundHome />
+  <img alt="Vue logo" src="./assets/logo.png" />
 </template>
 
 <script>
-import CrowdfundHome from "./components/CrowdfundHome.vue";
-import CFNav from "./components/CFNav.vue";
 
 export default {
   name: "App",
   components: {
-    CrowdfundHome,
-    CFNav,
   },
 };
 </script>
 
-<style>
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
