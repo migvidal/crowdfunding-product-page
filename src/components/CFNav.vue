@@ -1,6 +1,7 @@
 <template>
   <div class="menu">
     <nav>
+      
       <ul>
         <li>About</li>
         <li>Discover</li>
