@@ -6,13 +6,15 @@ footer {
 
 /* column layout */
 .inner {
-	width: 90% !important;
+	/* width: 90% !important; */
+	width: 50% !important;
 }
 .flex-container {
 	display: flex;
-	flex-direction: row;
+	/* flex-direction: row; */
+	flex-direction: column;
 	justify-content: center;
-	margin: 1em 0;
+	/* margin: 1em 0; */
 }
 .flex-item:nth-child(2) {
 	flex-basis: 60%;
@@ -66,9 +68,13 @@ footer {
 .bootstrap-color {
 	color: #390974;
 }
+.vue-color {
+	color: #3fb27f;
+}
 
 .separator {
 	height: .3em;
+	margin-top: .8rem;
 }
 
 
@@ -109,6 +115,9 @@ footer {
 
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
+	.inner {
+		width: 90% !important
+	}
 	.flex-container {
 		flex-direction: column;
 		justify-content: start;

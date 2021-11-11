@@ -8,6 +8,8 @@ title: Soy Miguel Vidal
 ## Con experiencia en <span class="js-color">JavaScript</span> y <span class="wp-color">Wordpress</span>.
 ## Y conocimientos de <span class="jekyll-color">Jekyll</span>, <span class="sass-color">Sass</span> y <span class="bootstrap-color">Bootstrap</span>.
 
+## Actualmente aprendiendo <span class="vue-color">Vue.js</span>.
+
 <br>
 [Mi portfolio](/portfolio) · [GitHub](https://github.com/migvidal/) · [LinkedIn](https://www.linkedin.com/in/miguel-vidal-funcia-121035167/)
 
