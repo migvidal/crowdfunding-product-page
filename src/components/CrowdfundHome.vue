@@ -7,8 +7,13 @@
       <p>
         A beautiful & handcrafted monitor stand to reduce neck and eye strain
       </p>
-      <button>Back this project</button>
-      <button>Bookmark/<wbr />Bookmarked</button>
+      <div class="action-buttons">
+        <button class="back-project">Back this project</button>
+        <!-- Subscribe/Subscribed -->
+        <button class="bookmark">
+          <img src="../images/icon-bookmark.svg" alt="Bookmark" aria-hidden="true"/>
+        </button>
+      </div>
     </header>
     <!-- stats -->
     <CFStats />
@@ -91,6 +96,30 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
+<style lang="scss">
+button {
+  border: none;
+  border-radius: 999px;
+  padding: 1rem;
+  white-space: nowrap;
+  color: #fff;
+  font-weight: bold;
+  background-color: $moderate-cyan;
+  max-width: 230px;
+  cursor: pointer;
+  &:hover {
+    background-color: $dark-cyan;
+  }
+  &.back-project {
+    flex: 1;
+    margin-right: 1rem;
+  }
+  &.bookmark {
+    background: none;
+    padding: 0;
+  }
+}
+</style>
 <style lang="scss" scoped>
 main.home {
   & > * {
@@ -100,9 +129,21 @@ main.home {
     border-radius: 0.5rem;
     background-color: #fff;
   }
-  img.logo {
-    margin: 0 auto;
-    margin-top: -60px;
+  header {
+    img.logo {
+      margin: 0 auto;
+      margin-top: -60px;
+    }
+    h1,
+    p {
+      text-align: center;
+    }
+
+    .action-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
   }
 }
 </style>
