@@ -1,4 +1,6 @@
 <template>
+  <div class="hero-image">
+  </div>
   <CFNav />
   <CrowdfundHome />
 </template>
@@ -25,5 +27,9 @@ body {
   //background-color: rgb(125, 150, 89);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  .hero-image {
+    background: url("./images/image-hero-mobile.jpg") no-repeat;
+    height: 300px;
+  }
 }
 </style>
