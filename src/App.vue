@@ -1,5 +1,5 @@
 <template>
-<!--   <div class="hero-image"></div> -->
+  <!--   <div class="hero-image"></div> -->
   <CFNav />
   <CrowdfundHome />
 </template>
@@ -25,7 +25,8 @@ body {
 #app {
   background-image: url("./images/image-hero-mobile.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 500px;
+  background-position: top center;
   background-color: #eee;
 
   -webkit-font-smoothing: antialiased;

@@ -2,12 +2,13 @@
   <main class="home">
     <!-- header -->
     <header class="header">
+      <img class="logo" src="../images/logo-mastercraft.svg" alt="" srcset="" />
       <h1>Mastercraft Bamboo Monitor Riser</h1>
       <p>
         A beautiful & handcrafted monitor stand to reduce neck and eye strain
       </p>
       <button>Back this project</button>
-      <button>Bookmark/<wbr>Bookmarked</button>
+      <button>Bookmark/<wbr />Bookmarked</button>
     </header>
     <!-- stats -->
     <CFStats />
@@ -96,8 +97,12 @@ main.home {
     //mixin?
     margin: 2rem;
     padding: 2rem;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     background-color: #fff;
+  }
+  img.logo {
+    margin: 0 auto;
+    margin-top: -60px;
   }
 }
 </style>
