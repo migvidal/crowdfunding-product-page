@@ -29,11 +29,6 @@ export default {
 </script>
 
 <style lang="scss" scoped >
-.reward {
-  border: 2px solid #eee;
-  border-radius: 12px;
-  padding: 1rem;
-  margin: 1rem 0;
-}
+
 </style>
 

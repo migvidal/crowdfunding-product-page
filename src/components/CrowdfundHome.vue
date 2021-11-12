@@ -11,7 +11,11 @@
         <button class="back-project">Back this project</button>
         <!-- Subscribe/Subscribed -->
         <button class="bookmark">
-          <img src="../images/icon-bookmark.svg" alt="Bookmark" aria-hidden="true"/>
+          <img
+            src="../images/icon-bookmark.svg"
+            alt="Bookmark"
+            aria-hidden="true"
+          />
         </button>
       </div>
     </header>
@@ -95,7 +99,7 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+<!-- Unscoped styles -->
 <style lang="scss">
 button {
   border: none;
@@ -123,16 +127,26 @@ button {
   }
 }
 .display-text {
-    font-size: 3rem;
+  font-size: 3rem;
+}
+.reward {
+  border: 2px solid #eee;
+  border-radius: $radius;
+  padding: 1rem;
+  margin: 1rem 0;
 }
 </style>
 <style lang="scss" scoped>
 main.home {
-  & > * {
+  //for the modal
+  position: relative;
+  z-index: 10;
+  header,
+  section {
     //mixin?
     margin: 2rem;
     padding: 2rem;
-    border-radius: 0.5rem;
+    border-radius: $radius;
     background-color: #fff;
   }
   header {

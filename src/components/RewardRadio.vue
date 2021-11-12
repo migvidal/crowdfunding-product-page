@@ -1,5 +1,5 @@
 <template>
-  <div v-if="reward.id > 0">
+  <div v-if="reward.id > 0" class="reward">
     <input type="radio" name="reward" :id="inputID" />
     <label :for="inputID">
       {{ reward.name }}
@@ -7,7 +7,7 @@
     <p>{{ reward.description }}</p>
   </div>
   <!-- if it's a no-reward pledge... -->
-  <div v-else>
+  <div v-else class="reward">
     <input type="radio" name="reward" id="no-reward" />
     <label for="no-reward"> Pledge with no reward </label>
     <p>{{ reward.description }}</p>

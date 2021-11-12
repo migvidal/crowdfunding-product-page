@@ -1,9 +1,14 @@
 <template>
-  <div class="modal">
-    <h2>Back this project</h2>
-    <reward-radio v-for="reward in rewards" :key="reward.id" :reward="reward" />
-    <success-modal/>
-    
+  <div class="modal-bg">
+    <div class="modal">
+      <h2>Back this project</h2>
+      <reward-radio
+        v-for="reward in rewards"
+        :key="reward.id"
+        :reward="reward"
+      />
+      <!-- <success-modal hidden/> -->
+    </div>
   </div>
 </template>
 
@@ -23,4 +28,28 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style lang="scss" scoped>
+.modal-bg {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.5);
+  //background-color: black;
+  .modal {
+    position: relative;
+    margin: 20px auto;
+    padding: 2rem;
+    height: 100%;
+    width: 90%;
+    background-color: white;
+    border-radius: $radius;
+    overflow: auto;
+    
+  }
+}
+</style>
