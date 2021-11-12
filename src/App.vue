@@ -1,5 +1,5 @@
 <template>
-  <div class="app-container">
+  <div class="{{'app-container' + modalOpen : 'no-scroll'}}">
     <CFNav />
     <CrowdfundHome />
   </div>
@@ -17,7 +17,7 @@ export default {
   },
   data() {
     return {
-      modalOpen
+      modalOpen: false
     }
   }
 };

@@ -1,5 +1,5 @@
 <template>
-  <main class="home">
+  <main class="home" @modalClosed="this.showModal = false">
     <!-- header -->
     <header class="header">
       <img class="logo" src="../images/logo-mastercraft.svg" alt="" srcset="" />

@@ -1,6 +1,7 @@
 <template>
   <div class="modal-bg">
     <div class="modal">
+      <button @click="closeModal">Close</button>
       <h2>Back this project</h2>
       <reward-radio
         v-for="reward in rewards"
@@ -25,6 +26,14 @@ export default {
   props: {
     rewards: Object,
   },
+  data() {
+    
+  },
+  methods: {
+    closeModal() {
+      this.$emit('modalClosed');
+    }
+  }
 };
 </script>
 
