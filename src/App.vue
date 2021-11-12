@@ -1,7 +1,8 @@
 <template>
-  <!--   <div class="hero-image"></div> -->
-  <CFNav />
-  <CrowdfundHome />
+  <div class="app-container">
+    <CFNav />
+    <CrowdfundHome />
+  </div>
 </template>
 
 <script>
@@ -14,6 +15,11 @@ export default {
     CrowdfundHome,
     CFNav,
   },
+  data() {
+    return {
+      modalOpen
+    }
+  }
 };
 </script>
 
@@ -43,9 +49,8 @@ strong {
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  .hero-image {
-    height: 300px;
-    margin-bottom: -60px;
+  .app-container.no-scroll {
+    overflow: hidden;
   }
 }
 </style>
