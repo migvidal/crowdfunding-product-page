@@ -7,7 +7,7 @@
         A beautiful & handcrafted monitor stand to reduce neck and eye strain
       </p>
       <button>Back this project</button>
-      <button>Bookmark/Bookmarked</button>
+      <button>Bookmark/<wbr>Bookmarked</button>
     </header>
     <!-- stats -->
     <CFStats />
@@ -92,7 +92,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 main.home {
-  background-color: $dark-gray;
   & > * {
     //mixin?
     margin: 2rem;

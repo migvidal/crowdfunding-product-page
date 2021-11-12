@@ -1,6 +1,5 @@
 <template>
-  <div class="hero-image">
-  </div>
+<!--   <div class="hero-image"></div> -->
   <CFNav />
   <CrowdfundHome />
 </template>
@@ -24,12 +23,16 @@ body {
   font-family: "Commissioner", sans-serif;
 }
 #app {
-  //background-color: rgb(125, 150, 89);
+  background-image: url("./images/image-hero-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: #eee;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   .hero-image {
-    background: url("./images/image-hero-mobile.jpg") no-repeat;
     height: 300px;
+    margin-bottom: -60px;
   }
 }
 </style>

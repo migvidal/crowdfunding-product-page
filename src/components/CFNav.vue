@@ -2,7 +2,8 @@
   <nav class="menu">
     <ul>
       <li class="logo">
-        <img src="../images/logo.svg" alt="" />
+        <a href="#"><img src="../images/logo.svg" alt="" /></a>
+        
       </li>
       <li>
         <a href="#">About</a>
@@ -28,7 +29,7 @@ export default {
 
 <style lang="scss" scoped>
 nav.menu {
-  background-color: darkblue;
+  //background-color: darkblue;
   color: white;
   padding: .1rem;
   a {
@@ -38,10 +39,12 @@ nav.menu {
   ul {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     & > li {
       flex: 2;
       list-style: none;
       margin: 0 .5rem;
+      white-space: nowrap;
 
       &.logo {
         flex: 10;
