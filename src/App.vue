@@ -21,7 +21,19 @@ export default {
 @import "./assets/reset.css";
 body {
   font-family: "Commissioner", sans-serif;
+  color: rgb(95, 95, 95);
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  color: initial;
+}
+
 #app {
   background-image: url("./images/image-hero-mobile.jpg");
   background-repeat: no-repeat;
@@ -35,6 +47,5 @@ body {
     height: 300px;
     margin-bottom: -60px;
   }
-  
 }
 </style>

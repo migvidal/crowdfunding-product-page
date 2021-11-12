@@ -4,7 +4,7 @@
     <p>Pledge ${{ reward.pledge }} or more</p>
     <p>{{ reward.description }}</p>
     <p>
-      <strong>{{ reward.units }} </strong> left
+      <strong class="display-text">{{ reward.units }} </strong> left
     </p>
     <button :disabled="!reward.units">
       {{ reward.units ? "Select Reward" : "Out of Stock" }}
@@ -28,4 +28,12 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style lang="scss" scoped >
+.reward {
+  border: 2px solid #eee;
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+</style>
+

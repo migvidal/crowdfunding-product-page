@@ -1,9 +1,9 @@
 <template>
   <section class="stats">
-    <div><strong> x </strong>of $100,000 backed</div>
-    <div><strong>x</strong> total backers</div>
+    <div><strong class="display-text">x</strong>of $100,000 backed</div>
+    <div><strong class="display-text">x</strong> total backers</div>
     <div>
-      <strong>{{ daysLeft }}</strong> days left
+      <strong class="display-text">{{ daysLeft }}</strong> days left
     </div>
   </section>
 </template>
@@ -31,4 +31,4 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style lang="scss" scoped></style>

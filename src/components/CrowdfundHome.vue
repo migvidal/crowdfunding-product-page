@@ -103,12 +103,15 @@ button {
   padding: 1rem;
   white-space: nowrap;
   color: #fff;
-  font-weight: bold;
+  font-weight: bold !important;
   background-color: $moderate-cyan;
   max-width: 230px;
   cursor: pointer;
   &:hover {
     background-color: $dark-cyan;
+  }
+  &:disabled {
+    background-color: #ccc;
   }
   &.back-project {
     flex: 1;
@@ -118,6 +121,9 @@ button {
     background: none;
     padding: 0;
   }
+}
+.display-text {
+    font-size: 3rem;
 }
 </style>
 <style lang="scss" scoped>
