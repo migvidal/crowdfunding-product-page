@@ -1,7 +1,7 @@
 <template>
-  <div class="modal-bg">
+  <div class="modal-bg" @keydown.esc="$emit('modalClose')" tabindex="0">
     <div class="modal">
-      <button class="modal-close-button" @click="$emit('modalClose')">
+      <button class="modal-close-button" @click="$emit('modalClose')" autofocus>
         <img src="../images/icon-close-modal.svg" aria-hidden="true" />
       </button>
       <h2>Back this project</h2>
