@@ -1,7 +1,7 @@
 <template>
   <div class="modal-bg">
     <div class="modal">
-      <button @click="closeModal">Close</button>
+      <button @click="$emit('closeModal')">Close</button>
       <h2>Back this project</h2>
       <reward-radio
         v-for="reward in rewards"
@@ -30,9 +30,6 @@ export default {
     
   },
   methods: {
-    closeModal() {
-      this.$emit('modalClosed');
-    }
   }
 };
 </script>
@@ -57,8 +54,7 @@ export default {
     width: 90%;
     background-color: white;
     border-radius: $radius;
-    overflow: auto;
-    
+    overflow: auto;   
   }
 }
 </style>

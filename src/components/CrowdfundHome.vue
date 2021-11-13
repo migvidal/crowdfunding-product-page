@@ -1,5 +1,5 @@
 <template>
-  <main class="home" @modalClosed="this.showModal = false">
+  <main class="home">
     <!-- header -->
     <header class="header">
       <img class="logo" src="../images/logo-mastercraft.svg" alt="" srcset="" />
@@ -38,7 +38,8 @@
       />
       <!-- modal -->
       <button @click="this.showModal = !this.showModal">Toggle Modal</button>
-      <pledge-modal v-show="this.showModal" :rewards="this.rewards" />
+      <pledge-modal v-if="this.showModal" @closeModal="this.showModal = false"
+      :rewards="this.rewards" />
     </section>
   </main>
 </template>
