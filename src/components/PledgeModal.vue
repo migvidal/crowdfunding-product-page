@@ -1,13 +1,16 @@
 <template>
   <div class="modal-bg">
     <div class="modal">
-      <button @click="$emit('closeModal')">Close</button>
+      <button class="modal-close-button" @click="$emit('modalClose')">
+        <img src="../images/icon-close-modal.svg" aria-hidden="true" />
+      </button>
       <h2>Back this project</h2>
       <reward-radio
         v-for="reward in rewards"
         :key="reward.id"
         :reward="reward"
       />
+
       <!-- <success-modal hidden/> -->
     </div>
   </div>
@@ -26,11 +29,7 @@ export default {
   props: {
     rewards: Object,
   },
-  data() {
-    
-  },
-  methods: {
-  }
+  methods: {},
 };
 </script>
 
@@ -54,7 +53,13 @@ export default {
     width: 90%;
     background-color: white;
     border-radius: $radius;
-    overflow: auto;   
+    overflow: auto;
+    button.modal-close-button {
+      float: right;
+      background: none;
+      padding: 0;
+      margin: 10px;
+    }
   }
 }
 </style>

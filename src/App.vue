@@ -1,5 +1,5 @@
 <template>
-  <div class="{{'app-container' + modalOpen : 'no-scroll'}}">
+  <div :class="{ 'no-scroll': modalOpen }">
     <CFNav />
     <CrowdfundHome />
   </div>
@@ -17,9 +17,8 @@ export default {
   },
   data() {
     return {
-      modalOpen: false
-    }
-  }
+    };
+  },
 };
 </script>
 
@@ -49,8 +48,5 @@ strong {
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  .app-container.no-scroll {
-    overflow: hidden;
-  }
 }
 </style>

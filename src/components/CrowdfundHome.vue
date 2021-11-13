@@ -8,7 +8,9 @@
         A beautiful & handcrafted monitor stand to reduce neck and eye strain
       </p>
       <div class="action-buttons">
-        <button class="back-project">Back this project</button>
+        <button @click="openModal" class="back-project">
+          Back this project
+        </button>
         <!-- Subscribe/Subscribed -->
         <button class="bookmark">
           <img
@@ -37,9 +39,11 @@
         :reward="reward"
       />
       <!-- modal -->
-      <button @click="this.showModal = !this.showModal">Toggle Modal</button>
-      <pledge-modal v-if="this.showModal" @closeModal="this.showModal = false"
-      :rewards="this.rewards" />
+      <pledge-modal
+        v-if="this.showModal"
+        @modalClose="handlemodalClose"
+        :rewards="this.rewards"
+      />
     </section>
   </main>
 </template>
@@ -96,6 +100,21 @@ export default {
       ],
       showModal: false,
     };
+  },
+  methods: {
+    openModal() {
+      this.showModal = true;
+      let body = document.getElementsByTagName("body")[0];
+      //console.log(body.classList);
+      body.classList.add("no-scroll");
+    },
+    handlemodalClose() {
+      this.showModal = false;
+      let body = document.getElementsByTagName("body")[0];
+
+      this.$emit("modalClose");
+      body.classList.remove("no-scroll");
+    },
   },
 };
 </script>
