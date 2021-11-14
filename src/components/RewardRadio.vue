@@ -19,6 +19,7 @@ export default {
   name: "RewardRadio",
   props: {
     reward: Object, // 1 reward
+    selectedId: null,
   },
   data() {
     return {};

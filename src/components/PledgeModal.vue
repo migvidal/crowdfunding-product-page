@@ -9,6 +9,7 @@
         v-for="reward in rewards"
         :key="reward.id"
         :reward="reward"
+        v-model="reward.selected"
       />
 
       <!-- <success-modal hidden/> -->
@@ -27,9 +28,8 @@ export default {
     SuccessModal,
   },
   props: {
-    rewards: Object,
+    rewards: Array,
   },
-  methods: {},
 };
 </script>
 

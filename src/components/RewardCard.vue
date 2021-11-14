@@ -21,6 +21,7 @@ export default {
   name: "RewardCard",
   props: {
     reward: Object,
+    
   },
   data() {
     return {};

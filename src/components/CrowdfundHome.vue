@@ -37,11 +37,12 @@
         v-for="reward in this.rewards"
         :key="reward.id"
         :reward="reward"
+        @click="openModal(reward.id)"
       />
       <!-- modal -->
       <pledge-modal
         v-if="this.showModal"
-        @modalClose="handlemodalClose"
+        @modalClose="handleModalClose"
         :rewards="this.rewards"
       />
     </section>
@@ -72,6 +73,7 @@ export default {
           description:
             "You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list",
           units: 101,
+          selected: false,
         },
         {
           id: 1,
@@ -80,6 +82,7 @@ export default {
           description:
             "You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list",
           units: 101,
+          selected: false,
         },
         {
           id: 2,
@@ -88,6 +91,7 @@ export default {
           description:
             "You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer member list. Shipping is included.",
           units: 64,
+          selected: false,
         },
         {
           id: 3,
@@ -96,24 +100,28 @@ export default {
           description:
             "You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to our Backer member list. Shipping is included.",
           units: 0,
+          selected: false,
         },
       ],
       showModal: false,
     };
   },
   methods: {
-    openModal() {
+    openModal(selectedId) {
+      this.rewards[selectedId].selected = true;
+      /* || false; */
+      this.letBodyScroll(false);
       this.showModal = true;
-      let body = document.getElementsByTagName("body")[0];
-      //console.log(body.classList);
-      body.classList.add("no-scroll");
     },
-    handlemodalClose() {
+    handleModalClose() {
+      this.rewards.forEach(reward => reward.selected = false);
+      this.letBodyScroll();
       this.showModal = false;
+    },
+    letBodyScroll(scrollable = true) {
       let body = document.getElementsByTagName("body")[0];
-
-      this.$emit("modalClose");
-      body.classList.remove("no-scroll");
+      body.classList.remove("no-scroll"); 
+      if (!scrollable) body.classList.add("no-scroll");
     },
   },
 };
