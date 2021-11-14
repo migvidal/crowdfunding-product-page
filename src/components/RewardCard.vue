@@ -10,9 +10,12 @@
       {{ reward.units ? "Select Reward" : "Out of Stock" }}
     </button>
   </div>
-  <div v-else class="no-reward-card">
+  <div v-else class="reward">
     <h2>Pledge with no reward</h2>
     <p>{{ reward.description }}</p>
+    <button :disabled="!reward.units">
+      {{ reward.units ? "Select Reward" : "Out of Stock" }}
+    </button>
   </div>
 </template>
 

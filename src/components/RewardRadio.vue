@@ -1,6 +1,9 @@
 <template>
+  <!-- if it's a reward pledge... -->
   <div v-if="reward.id > 0" class="reward">
-    <input type="radio" name="reward" :id="inputID" />
+    <input type="radio" name="reward" 
+    :checked="reward.selected"
+     :id="inputID"  />
     <label :for="inputID">
       {{ reward.name }}
     </label>
@@ -19,7 +22,6 @@ export default {
   name: "RewardRadio",
   props: {
     reward: Object, // 1 reward
-    selectedId: null,
   },
   data() {
     return {};
@@ -32,4 +34,9 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+
+reward input[type=radio] {
+
+}
+</style>

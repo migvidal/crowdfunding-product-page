@@ -9,7 +9,7 @@
         v-for="reward in rewards"
         :key="reward.id"
         :reward="reward"
-        v-model="reward.selected"
+        
       />
 
       <!-- <success-modal hidden/> -->
