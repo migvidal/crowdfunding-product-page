@@ -39,6 +39,15 @@ strong {
   color: initial;
 }
 
+p {
+  margin: 1rem 0;
+}
+
+h1 {
+  line-height: 1.3;
+}
+
+
 #app {
   background-image: url("./images/image-hero-mobile.jpg");
   background-repeat: no-repeat;
