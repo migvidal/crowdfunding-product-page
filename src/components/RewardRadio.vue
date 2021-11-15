@@ -1,13 +1,13 @@
 <template>
   <!-- if it's a reward pledge... -->
   <div v-if="reward.id > 0" class="reward">
-    <input
-      type="radio"
-      name="reward"
-      :checked="reward.selected"
-      :id="inputID"
-    />
-    <label :for="inputID">
+    <label>
+      <input
+        type="radio"
+        name="reward"
+        :checked="reward.selected"
+        :id="inputID"
+      />
       {{ reward.name }}
       <p>Pledge ${{ reward.pledge }} or more</p>
     </label>
@@ -15,8 +15,10 @@
   </div>
   <!-- if it's a no-reward pledge... -->
   <div v-else class="reward">
-    <input type="radio" name="reward" id="no-reward" />
-    <label for="no-reward"> Pledge with no reward </label>
+    <label>
+      <input type="radio" name="reward" id="no-reward" />
+      Pledge with no reward
+    </label>
     <p>{{ reward.description }}</p>
   </div>
 </template>
@@ -39,18 +41,32 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.reward {
-  input[type="radio"] {
-    vertical-align: middle;
+/* custom radio */
+label::before {
+  content: "";
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  margin-right: 10px;
+  padding: 2px;
+  border-radius: 50%;
+  background-color: black;
+  border: 1px solid black;
+}
+input[type="radio"] {
+  opacity: 0;
+  /* vertical-align: middle;
     line-height: 1;
-    cursor: pointer;
-  }
+    cursor: pointer; */
+}
+.reward {
   label {
     display: inline-block;
     font-weight: $bolder;
     line-height: 1;
     vertical-align: middle;
     cursor: pointer;
+
     p {
       font-weight: $bold;
       color: $moderate-cyan;
