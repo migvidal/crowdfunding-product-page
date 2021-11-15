@@ -1,11 +1,15 @@
 <template>
   <!-- if it's a reward pledge... -->
   <div v-if="reward.id > 0" class="reward">
-    <input type="radio" name="reward" 
-    :checked="reward.selected"
-     :id="inputID"  />
+    <input
+      type="radio"
+      name="reward"
+      :checked="reward.selected"
+      :id="inputID"
+    />
     <label :for="inputID">
       {{ reward.name }}
+      <p>Pledge ${{ reward.pledge }} or more</p>
     </label>
     <p>{{ reward.description }}</p>
   </div>
@@ -34,9 +38,26 @@ export default {
 };
 </script>
 
-<style scoped>
-
-reward input[type=radio] {
-
+<style lang="scss" scoped>
+.reward {
+  input[type="radio"] {
+    vertical-align: middle;
+    line-height: 1;
+    cursor: pointer;
+  }
+  label {
+    display: inline-block;
+    font-weight: $bolder;
+    line-height: 1;
+    vertical-align: middle;
+    cursor: pointer;
+    p {
+      font-weight: $bold;
+      color: $moderate-cyan;
+      margin-bottom: 0;
+    }
+  }
+  input[type="radio"]:checked + label {
+  }
 }
 </style>

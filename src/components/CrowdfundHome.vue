@@ -193,5 +193,6 @@ main.home {
       justify-content: space-between;
     }
   }
+  
 }
 </style>

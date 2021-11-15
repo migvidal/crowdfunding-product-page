@@ -31,4 +31,11 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+section.stats {
+  text-align: center;
+  strong.display-text {
+    display: block;
+  }
+}
+</style>
