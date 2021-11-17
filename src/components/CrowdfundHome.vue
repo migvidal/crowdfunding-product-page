@@ -42,8 +42,9 @@
       <!-- modal -->
       <pledge-modal
         v-if="this.showModal"
-        @modalClose="handleModalClose"
         :rewards="this.rewards"
+        @modalClose="handleModalClose"
+        @selectoption="updateSelected"
       />
     </section>
   </main>
@@ -114,13 +115,19 @@ export default {
       this.showModal = true;
     },
     handleModalClose() {
-      this.rewards.forEach(reward => reward.selected = false);
+      this.rewards.forEach((reward) => (reward.selected = false));
       this.letBodyScroll();
       this.showModal = false;
     },
+    updateSelected(selectedId) {
+      this.rewards.forEach((reward) => {
+        let isSelected = reward.id === selectedId;
+        reward.selected =  isSelected ? true : false;
+      });
+    },
     letBodyScroll(scrollable = true) {
       let body = document.getElementsByTagName("body")[0];
-      body.classList.remove("no-scroll"); 
+      body.classList.remove("no-scroll");
       if (!scrollable) body.classList.add("no-scroll");
     },
   },
@@ -193,6 +200,5 @@ main.home {
       justify-content: space-between;
     }
   }
-  
 }
 </style>

@@ -1,13 +1,15 @@
 <template>
   <!-- if it's a reward pledge... -->
-  <div v-if="reward.id > 0" class="reward">
-    <label>
-      <input
-        type="radio"
-        name="reward"
-        :checked="reward.selected"
-        :id="inputID"
-      />
+  <div v-if="reward.id > 0" :class="['reward', { selected: reward.selected }]">
+    <input
+      type="radio"
+      name="reward"
+      :checked="reward.selected"
+      :ref="inputID"
+      :id="inputID"
+      
+    />
+    <label :for="inputID">
       {{ reward.name }}
       <p>Pledge ${{ reward.pledge }} or more</p>
     </label>
@@ -15,10 +17,8 @@
   </div>
   <!-- if it's a no-reward pledge... -->
   <div v-else class="reward">
-    <label>
-      <input type="radio" name="reward" id="no-reward" />
-      Pledge with no reward
-    </label>
+    <input type="radio" name="reward" id="no-reward" :ref="inputID" />
+    <label :for="inputID"> Pledge with no reward </label>
     <p>{{ reward.description }}</p>
   </div>
 </template>
@@ -32,6 +32,7 @@ export default {
   data() {
     return {};
   },
+  methods: {},
   computed: {
     inputID() {
       return "reward-" + this.reward.id;
@@ -42,23 +43,18 @@ export default {
 
 <style lang="scss" scoped>
 /* custom radio */
-label::before {
-  content: "";
-  display: inline-block;
-  height: 15px;
-  width: 15px;
-  margin-right: 10px;
-  padding: 2px;
-  border-radius: 50%;
-  background-color: black;
-  border: 1px solid black;
-}
 input[type="radio"] {
-  opacity: 0;
-  /* vertical-align: middle;
-    line-height: 1;
-    cursor: pointer; */
+  appearance: none;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  margin-right: 15px;
+  background-color: transparent;
+  border: 5px solid white;
+  box-shadow: 0 0 0 2px $dark-gray;
+  cursor: pointer;
 }
+
 .reward {
   label {
     display: inline-block;
@@ -73,7 +69,8 @@ input[type="radio"] {
       margin-bottom: 0;
     }
   }
-  input[type="radio"]:checked + label {
+  input[type="radio"]:checked {
+    background-color: $moderate-cyan;
   }
 }
 </style>

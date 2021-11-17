@@ -9,7 +9,7 @@
         v-for="reward in rewards"
         :key="reward.id"
         :reward="reward"
-        
+        @change="$emit('selectoption', reward.id)"
       />
 
       <!-- <success-modal hidden/> -->
@@ -23,6 +23,8 @@ import SuccessModal from "./SuccessModal.vue";
 
 export default {
   name: "PledgeModal",
+  emits: ["selectoption"],
+  
   components: {
     RewardRadio,
     SuccessModal,
