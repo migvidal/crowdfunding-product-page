@@ -5,11 +5,13 @@
         <img src="../images/icon-close-modal.svg" aria-hidden="true" />
       </button>
       <h2>Back this project</h2>
+      
+      <!-- Radio cards -->
       <reward-radio
         v-for="reward in rewards"
         :key="reward.id"
         :reward="reward"
-        @change="$emit('selectoption', reward.id)"
+        @change="updateSelected(reward.id)"
       />
 
       <!-- <success-modal hidden/> -->
@@ -32,6 +34,14 @@ export default {
   props: {
     rewards: Array,
   },
+  methods: {
+    updateSelected(selectedId) {
+      this.rewards.forEach((reward) => {
+        let isSelected = reward.id === selectedId;
+        reward.selected =  isSelected ? true : false;
+      });
+    },
+  }
 };
 </script>
 
