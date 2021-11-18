@@ -123,11 +123,9 @@ export default {
       this.showModal = false;
     },
     updateSelected(selectedId) {
-      //console.log(selectedId);
       this.rewards.forEach((reward) => {
         let isSelected = reward.id == selectedId;
         reward.selected = isSelected;
-        this.logResult(reward.selected + '-' + isSelected);
       });
     },
     letBodyScroll(scrollable = true) {
