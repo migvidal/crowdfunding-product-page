@@ -1,7 +1,7 @@
 <template>
-  <div class="modal-bg" @keydown.esc="$emit('modalClose')" tabindex="0">
+  <div class="modal-bg" @keydown.esc="$emit('modalclose')" tabindex="0">
     <div class="modal">
-      <button class="modal-close-button" @click="$emit('modalClose')" autofocus>
+      <button class="modal-close-button" @click="$emit('modalclose')" autofocus>
         <img src="../images/icon-close-modal.svg" aria-hidden="true" />
       </button>
       <h2>Back this project</h2>
@@ -11,7 +11,8 @@
         v-for="reward in rewards"
         :key="reward.id"
         :reward="reward"
-        @change="updateSelected(reward.id)"
+        :checked="reward.selected"
+        @selectoption="rewardId => $emit('selectoption', rewardId)"
       />
 
       <!-- <success-modal hidden/> -->
@@ -35,12 +36,9 @@ export default {
     rewards: Array,
   },
   methods: {
-    updateSelected(selectedId) {
-      this.rewards.forEach((reward) => {
-        let isSelected = reward.id === selectedId;
-        reward.selected =  isSelected ? true : false;
-      });
-    },
+    logResult(r) {
+      console.log(r);
+    }
   }
 };
 </script>

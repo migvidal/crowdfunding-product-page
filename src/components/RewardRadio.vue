@@ -1,26 +1,22 @@
 <template>
   <!-- if it's a reward pledge... -->
-  <div v-if="reward.id > 0" :class="['reward', { selected: reward.selected }]">
+  <div :class="['reward', { selected: reward.selected }]">
     <input
       type="radio"
       name="reward"
       :checked="reward.selected"
       :ref="inputID"
       :id="inputID"
+      @change="$emit('selectoption', this.reward.id)"
       
     />
     <label :for="inputID">
-      {{ reward.name }}
-      <p>Pledge ${{ reward.pledge }} or more</p>
+      {{ reward.name || "Pledge with no reward" }}
+      <p v-if="reward.pledge">Pledge ${{ reward.pledge }} or more</p>
     </label>
     <p>{{ reward.description }}</p>
   </div>
   <!-- if it's a no-reward pledge... -->
-  <div v-else class="reward">
-    <input type="radio" name="reward" id="no-reward" :ref="inputID" />
-    <label :for="inputID"> Pledge with no reward </label>
-    <p>{{ reward.description }}</p>
-  </div>
 </template>
 
 <script>
