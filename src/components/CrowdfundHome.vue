@@ -168,10 +168,8 @@ button {
   font-size: 3rem;
 }
 .reward {
-  border: 2px solid #eee;
+  border: $card-border;
   border-radius: $radius;
-  padding: 1rem;
-  margin: 1rem 0;
 }
 </style>
 <style lang="scss" scoped>

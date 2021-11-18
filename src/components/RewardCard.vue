@@ -1,5 +1,5 @@
 <template>
-  <div v-if="reward.id > 0" class="reward">
+  <div v-if="reward.id > 0" class="reward card">
     <h2>{{ reward.name }}</h2>
     <p>Pledge ${{ reward.pledge }} or more</p>
     <p>{{ reward.description }}</p>
@@ -24,7 +24,6 @@ export default {
   name: "RewardCard",
   props: {
     reward: Object,
-    
   },
   data() {
     return {};
@@ -32,7 +31,9 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped >
-
+<style lang="scss" scoped>
+.reward.card {
+  padding: 1rem;
+  margin: 1rem 0;
+}
 </style>
-
