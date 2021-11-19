@@ -1,6 +1,6 @@
 ---
 layout: miguel
-page: index
+page: portfolio
 title: Soy Miguel Vidal
 ---
 
