@@ -1,5 +1,6 @@
 ---
 layout: miguel
+page: portfolio
 title: Mis proyectos
 ---
 

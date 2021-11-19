@@ -28,16 +28,29 @@
           <div class="separator small gradient-bg"></div>
         </div>
 
-            <main class="info">
-              <header>
-                <h1>{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
-              </header>
-  
-  
+        <header>
+          <h1>{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
+        </header>
+
+        {% if page.page == "portfolio" %}
+        <main id="projects">
+
+          {{ content }}
+        </main>
+        
+        {% else %}
+        <main class="info">
+              
               <section id="main_content">
                 {{ content }}
               </section>
+              
+              
             </main>
+            {% endif %}
+
+
+            
 
             <footer>
                 {% if site.github.is_project_page %}

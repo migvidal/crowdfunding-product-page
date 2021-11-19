@@ -1,5 +1,6 @@
 ---
-layout: portfolio
+layout: miguel
+page: portfolio
 title: My projects
 ---
 
@@ -9,7 +10,7 @@ title: My projects
 
 [![Dimensional](assets/images/projects/dimensional-poster.png)](http://dimensional3.000webhostapp.com/)
 
-[Github](https://github.com/migvidal/dimensional)
+[<i class="fab fa-github"></i> GitHub](https://github.com/migvidal/dimensional)
 
 
 ## VidalWP
@@ -18,6 +19,6 @@ title: My projects
 
 [![VidalWP](assets/images/projects/vidalwp-poster.png)](https://github.com/migvidal/vidalwp)
 
-[Github](https://github.com/migvidal/vidalwp)
+[<i class="fab fa-github"></i> GitHub](https://github.com/migvidal/vidalwp)
 
 **[&#8592; Go back](./)**
