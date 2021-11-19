@@ -3,17 +3,19 @@ layout: miguel
 title: Soy Miguel Vidal
 ---
 
+Desarrollador web front-end (técnico superior).
+Con experiencia en <span class="js-color">JavaScript</span> y <span class="wp-color">Wordpress</span>.
 
-## Desarrollador web front-end.
-## Con experiencia en <span class="js-color">JavaScript</span> y <span class="wp-color">Wordpress</span>.
-## Y conocimientos de <span class="jekyll-color">Jekyll</span>, <span class="sass-color">Sass</span> y <span class="bootstrap-color">Bootstrap</span>.
+Aficionado al diseño 🌐 web y de interfaces, y siempre al tanto de nuevas tendencias.
 
-## Actualmente aprendiendo <span class="vue-color">Vue.js</span>.
+Herramientas que utilizo: <span class="sass-color">Sass</span>, <span class="bootstrap-color">Bootstrap</span>, <span class="figma-color">Figma</span> y <span class="jekyll-color">Jekyll</span>.
 
+Actualmente aprendiendo <span class="vue-color">Vue.js</span>.
 <br>
-[Mi portfolio](/portfolio) · [GitHub](https://github.com/migvidal/) · [LinkedIn](https://www.linkedin.com/in/miguel-vidal-funcia-121035167/)
+
+
+[Mi portfolio](/portfolio) · [<i class="fab fa-github"></i>](https://github.com/migvidal/) · [<i class="fab fa-linkedin-in"></i>](https://www.linkedin.com/in/miguel-vidal-funcia-121035167/)
 
 <br>
 
 **[View in English](/portfolio-en)**
-

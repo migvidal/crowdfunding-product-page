@@ -6,34 +6,15 @@
   color: #303030;
 }
 
+/* elements */
+a {
+  text-align: center !important;
+}
+
 /* footer */
 footer {
   position: relative;
   bottom: 0;
-}
-
-/* column layout */
-.inner {
-  /* width: 90% !important; */
-  width: 50% !important;
-}
-.flex-container {
-  display: flex;
-  /* flex-direction: row; */
-  flex-direction: column;
-  justify-content: center;
-  /* margin: 1em 0; */
-}
-.flex-item:nth-child(2) {
-  flex-basis: 60%;
-}
-.flex-item header {
-  padding: 0;
-  position: sticky;
-  top: 10px;
-}
-.flex-item header h1 {
-  margin: 0 1em 10px 0;
 }
 
 /* top bar*/
@@ -59,6 +40,9 @@ footer {
 .large {
   flex: 10;
 }
+
+/* main */
+
 
 /* img */
 
@@ -97,6 +81,9 @@ footer {
 }
 .bootstrap-color {
   color: #390974;
+}
+.figma-color {
+  color: #000;
 }
 .vue-color {
   color: #3fb27f;
@@ -141,7 +128,8 @@ footer {
   }
 }
 
-/* All Mobile Sizes (devices and browser) */
+
+/* Device queries */
 @media only screen and (max-width: 480px) {
   .top .separator.small {
     display: none;
