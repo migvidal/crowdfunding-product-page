@@ -44,7 +44,7 @@
         v-if="this.showModal"
         :rewards="this.rewards"
         @modalclose="handleModalClose"
-        @selectoption="updateSelected"
+        @submitpledge="updateRewards"
       />
     </section>
   </main>
@@ -78,7 +78,7 @@ export default {
         {
           id: 1,
           name: "Bamboo Stand",
-          pledge: 25,
+          raised: 25,
           description:
             "You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list",
           units: 101,
@@ -87,7 +87,7 @@ export default {
         {
           id: 2,
           name: "Black Edition Stand",
-          pledge: 75,
+          raised: 75,
           description:
             "You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer member list. Shipping is included.",
           units: 64,
@@ -96,7 +96,7 @@ export default {
         {
           id: 3,
           name: "Mahogany Special Edition",
-          pledge: 200,
+          raised: 200,
           description:
             "You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to our Backer member list. Shipping is included.",
           units: 0,
@@ -107,6 +107,13 @@ export default {
     };
   },
   methods: {
+    updateRewards(selectedPledge) {
+      this.rewards.forEach(reward => {
+        if (reward.id == selectedPledge.id) {
+          reward.raised += selectedPledge.money;
+        }
+      })
+    },
     logResult(r) {
       console.log(r);
     },

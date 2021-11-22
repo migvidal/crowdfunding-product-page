@@ -12,7 +12,7 @@
         :key="reward.id"
         :reward="reward"
         :checked="reward.selected"
-        @selectoption="(rewardId) => $emit('selectoption', rewardId)"
+        @selectoption="handleSelectOption"
         @valuesubmit="handleSubmit"
       />
 
@@ -27,7 +27,7 @@ import SuccessModal from "./SuccessModal.vue";
 
 export default {
   name: "PledgeModal",
-  emits: ["selectoption"],
+  emits: ['selectoption', 'submitpledge'],
 
   components: {
     RewardRadio,
@@ -48,10 +48,12 @@ export default {
     logResult(r) {
       console.log(r);
     },
+    handleSelectOption(rewardId) {
+      this.selectedPledge.id = rewardId;
+    },
     handleSubmit(money) {
       this.selectedPledge.money = money;
-
-      //this.$emit("valuesubmit", money);
+      this.$emit('submitpledge', this.selectedPledge);
     },
   },
 };

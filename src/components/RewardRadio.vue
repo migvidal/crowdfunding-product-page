@@ -43,7 +43,7 @@ export default {
   },
   methods: {
     handleChange() {
-      this.selectedPledge.id(this.reward.id)
+      //this.selectedPledge.id(this.reward.id)
       this.$emit("selectoption", this.reward.id);
     },
     handleSubmit(money) {
