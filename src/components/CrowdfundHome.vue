@@ -37,7 +37,7 @@
         v-for="reward in this.rewards"
         :key="reward.id"
         :reward="reward"
-        @click="openModal(reward.id)"
+        @btnclick="openModal(reward.id)"
       />
       <!-- modal -->
       <pledge-modal

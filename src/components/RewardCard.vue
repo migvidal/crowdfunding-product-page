@@ -6,7 +6,7 @@
     <p>
       <strong class="display-text">{{ reward.units }} </strong> left
     </p>
-    <button :disabled="!reward.units">
+    <button @click="$emit('btnclick')" :disabled="!reward.units">
       {{ reward.units ? "Select Reward" : "Out of Stock" }}
     </button>
   </div>
