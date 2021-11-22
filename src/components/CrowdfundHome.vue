@@ -73,7 +73,6 @@ export default {
           id: 0,
           description:
             "You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list",
-          units: 101,
           selected: false,
         },
         {

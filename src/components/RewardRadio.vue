@@ -16,16 +16,19 @@
         <p v-if="reward.pledge">Pledge ${{ reward.pledge }} or more</p>
       </label>
       <p>{{ reward.description }}</p>
-      <p>
+      <p v-if="reward.units">
         <strong>{{ reward.units }} </strong> left
       </p>
     </div>
     <!-- hidden part -->
     <div class="enter-pledge" v-if="reward.selected">
       <p>Enter your pledge</p>
-      <form>
-        <input type="text" name="money" id="money" />
-        <button type="button">Continue</button>
+      <form @submit.prevent="handleSubmit">
+        <div class="input-group">
+          <label for="money">$</label>
+          <input type="text" name="money" id="money" />
+        </div>
+        <button type="submit">Continue</button>
       </form>
     </div>
   </div>
@@ -40,6 +43,9 @@ export default {
   methods: {
     handleChange() {
       this.$emit("selectoption", this.reward.id);
+    },
+    handleSubmit() {
+
     },
   },
   computed: {
@@ -57,6 +63,9 @@ export default {
   margin: 1rem 0;
   & > * {
     padding: 1rem;
+  }
+  &.selected {
+    border-color: $moderate-cyan;
   }
   .radio-card {
     input[type="radio"] {
@@ -86,9 +95,6 @@ export default {
     input[type="radio"]:checked {
       background-color: $moderate-cyan;
     }
-    &.selected {
-      border-color: $moderate-cyan;
-    }
   }
 }
 .enter-pledge {
@@ -98,9 +104,23 @@ export default {
   form {
     display: flex;
     flex-wrap: wrap;
-    input[type="text"] {
-      border: $card-border;
-      border-radius: 999px;
+    .input-group {
+      position: relative;
+      label {
+        position: relative;
+        left: 25px;
+        font-weight: bold;
+        color: $moderate-gray;
+      }
+      input[type="text"] {
+        width: 100px;
+        padding: 10px 40px;
+        border: $card-border;
+        border-radius: 999px;
+        &:focus {
+          outline: 2px solid $dark-gray;
+        }
+      }
     }
   }
 }
