@@ -21,7 +21,7 @@
       </p>
     </div>
     <!-- hidden form -->
-    <MoneyForm v-if="reward.selected" @valuesubmit="money => $emit('valuesubmit', money)"/>
+    <MoneyForm v-if="reward.selected" @valuesubmit="handleSubmit" />
   </div>
 </template>
 
@@ -36,11 +36,19 @@ export default {
   props: {
     reward: Object, // 1 reward
   },
+  data() {
+    return {
+      
+    };
+  },
   methods: {
     handleChange() {
-      this.$emit("selectoption", this.reward.id);
+      tis.selectedPledge.id(this.reward.id)
+      //this.$emit("selectoption", this.reward.id);
     },
-    handleSubmit() {},
+    handleSubmit(money) {
+      this.$emit("valuesubmit", money);
+    },
   },
   computed: {
     inputID() {
@@ -91,5 +99,4 @@ export default {
     }
   }
 }
-
 </style>

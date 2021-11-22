@@ -16,7 +16,6 @@ export default {
   name: "MoneyForm",
   data() {
     return {
-      //money: 0,
     };
   },
   methods: {

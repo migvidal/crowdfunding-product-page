@@ -13,7 +13,7 @@
         :reward="reward"
         :checked="reward.selected"
         @selectoption="(rewardId) => $emit('selectoption', rewardId)"
-        @valuesubmit="v=>"
+        @valuesubmit="handleSubmit"
       />
 
       <!-- <success-modal hidden/> -->
@@ -38,12 +38,20 @@ export default {
   },
   data() {
     return {
-      chosenPledge: null,
+      selectedPledge: {
+        id: null,
+        money: 0,
+      },
     };
   },
   methods: {
     logResult(r) {
       console.log(r);
+    },
+    handleSubmit(money) {
+      this.selectedPledge.money = money;
+
+      //this.$emit("valuesubmit", money);
     },
   },
 };
