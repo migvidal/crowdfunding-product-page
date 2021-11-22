@@ -4,7 +4,7 @@
     <form @submit.prevent="handleSubmit">
       <div class="input-group">
         <label for="money">$</label>
-        <input type="text" name="money" id="money" />
+        <input type="number" inputmode="numeric" name="money" id="money" />
       </div>
       <button type="submit">Continue</button>
     </form>
@@ -20,9 +20,14 @@ export default {
     };
   },
   methods: {
+    valueIsCorrect(value) {
+      if (value != "" && value >= 0 && value <= 1000) {
+        this.money = value;
+      }
+    },
     handleSubmit(e) {
       let value = e.target["money"].value;
-      if (value != "" && value >= 0 && value <= 1000) {
+      if (this.valueIsCorrect(value)) {
         this.money = value;
       }
     },
@@ -49,7 +54,9 @@ export default {
       input[type="number"] {
         background: none;
         width: 150px;
-        padding: 10px 40px;
+        padding: 10px;
+        padding-left: 40px;
+        
         border: $card-border;
         border-radius: 999px;
         &:focus {
