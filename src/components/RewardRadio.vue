@@ -20,23 +20,19 @@
         <strong>{{ reward.units }} </strong> left
       </p>
     </div>
-    <!-- hidden part -->
-    <div class="enter-pledge" v-if="reward.selected">
-      <p>Enter your pledge</p>
-      <form @submit.prevent="handleSubmit">
-        <div class="input-group">
-          <label for="money">$</label>
-          <input type="text" name="money" id="money" />
-        </div>
-        <button type="submit">Continue</button>
-      </form>
-    </div>
+    <!-- hidden form -->
+    <MoneyForm v-if="reward.selected"/>
   </div>
 </template>
 
 <script>
+import MoneyForm from "./MoneyForm.vue";
+
 export default {
   name: "RewardRadio",
+  components: {
+    MoneyForm,
+  },
   props: {
     reward: Object, // 1 reward
   },
@@ -44,9 +40,7 @@ export default {
     handleChange() {
       this.$emit("selectoption", this.reward.id);
     },
-    handleSubmit() {
-
-    },
+    handleSubmit() {},
   },
   computed: {
     inputID() {
@@ -97,31 +91,5 @@ export default {
     }
   }
 }
-.enter-pledge {
-  display: flex;
-  flex-wrap: wrap;
-  border-top: 2px solid #eee;
-  form {
-    display: flex;
-    flex-wrap: wrap;
-    .input-group {
-      position: relative;
-      label {
-        position: relative;
-        left: 25px;
-        font-weight: bold;
-        color: $moderate-gray;
-      }
-      input[type="text"] {
-        width: 100px;
-        padding: 10px 40px;
-        border: $card-border;
-        border-radius: 999px;
-        &:focus {
-          outline: 2px solid $dark-gray;
-        }
-      }
-    }
-  }
-}
+
 </style>
