@@ -5,14 +5,15 @@
         <img src="../images/icon-close-modal.svg" aria-hidden="true" />
       </button>
       <h2>Back this project</h2>
-      
+
       <!-- Radio cards -->
       <reward-radio
         v-for="reward in rewards"
         :key="reward.id"
         :reward="reward"
         :checked="reward.selected"
-        @selectoption="rewardId => $emit('selectoption', rewardId)"
+        @selectoption="(rewardId) => $emit('selectoption', rewardId)"
+        @valuesubmit="v=>"
       />
 
       <!-- <success-modal hidden/> -->
@@ -27,7 +28,7 @@ import SuccessModal from "./SuccessModal.vue";
 export default {
   name: "PledgeModal",
   emits: ["selectoption"],
-  
+
   components: {
     RewardRadio,
     SuccessModal,
@@ -35,11 +36,16 @@ export default {
   props: {
     rewards: Array,
   },
+  data() {
+    return {
+      chosenPledge: null,
+    };
+  },
   methods: {
     logResult(r) {
       console.log(r);
-    }
-  }
+    },
+  },
 };
 </script>
 

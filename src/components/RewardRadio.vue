@@ -21,7 +21,7 @@
       </p>
     </div>
     <!-- hidden form -->
-    <MoneyForm v-if="reward.selected"/>
+    <MoneyForm v-if="reward.selected" @valuesubmit="money => $emit('valuesubmit', money)"/>
   </div>
 </template>
 
