@@ -4,7 +4,15 @@
     <form @submit.prevent="handleSubmit">
       <div class="input-group">
         <label for="money">$</label>
-        <input type="number" min="1" max="1000" inputmode="numeric" name="money" id="money" />
+        <input
+          v-model="this.money"
+          type="number"
+          min="1"
+          max="1000"
+          inputmode="numeric"
+          name="money"
+          id="money"
+        />
       </div>
       <button type="submit">Continue</button>
     </form>
@@ -16,6 +24,7 @@ export default {
   name: "MoneyForm",
   data() {
     return {
+      money: 0,
     };
   },
   methods: {
@@ -24,12 +33,10 @@ export default {
         return true;
       } else return false;
     },
-    handleSubmit(e) {
-      let value = e.target["money"].value;
-      if (this.valueIsCorrect(value)) {
-        this.$emit('valuesubmit', parseInt(value));
+    handleSubmit() {
+      if (this.valueIsCorrect(this.money)) {
+        this.$emit("valuesubmit", parseInt(this.money));
       }
-      
     },
   },
 };
