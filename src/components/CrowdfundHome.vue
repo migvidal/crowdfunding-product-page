@@ -137,7 +137,7 @@ export default {
     },
     resetSelected() {
       this.rewards.forEach((reward) => {
-        reward.isSelected = false;
+        reward.selected = false;
       });
     },
     letBodyScroll(scrollable = true) {

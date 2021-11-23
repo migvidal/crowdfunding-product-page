@@ -6,7 +6,7 @@
       <input
         type="radio"
         name="reward"
-        :checked="this.checked"
+        :checked="reward.checked"
         :ref="inputID"
         :id="inputID"
         @change="handleChange"
@@ -38,13 +38,11 @@ export default {
   },
   data() {
     return {
-      
       checked: false, //acts both as initial check and as style
     };
   },
   methods: {
     handleChange() {
-      this.checked = true;
       this.$emit("selectoption", this.reward.id);
     },
     handleSubmit(money) {

@@ -8,7 +8,7 @@
 
       <!-- Radio cards -->
       <reward-radio
-        v-for="reward in rewards"
+        v-for="reward in rewardsCopy"
         :key="reward.id"
         :reward="reward"
         :checked="reward.selected"
@@ -27,7 +27,7 @@ import SuccessModal from "./SuccessModal.vue";
 
 export default {
   name: "PledgeModal",
-  emits: ['selectoption', 'submitpledge'],
+  emits: ["selectoption", "submitpledge"],
 
   components: {
     RewardRadio,
@@ -38,6 +38,7 @@ export default {
   },
   data() {
     return {
+      rewardsCopy: this.rewards,
       selectedPledge: {
         id: null,
         money: 0,
@@ -49,12 +50,20 @@ export default {
       console.log(r);
     },
     handleSelectOption(rewardId) {
-      this.$emit('selectoption');
-      this.selectedPledge.id = rewardId;
+      
+      //this.$emit("selectoption");
+      //_/this.selectedPledge.id = rewardId;
+      this.rewardsCopy.forEach((reward) => {
+        if ((reward.id === rewardId)) {
+          reward.selected = true;
+        } else reward.selected = false;
+      });
     },
     handleSubmit(money) {
-      this.selectedPledge.money = money;
-      this.$emit('submitpledge', this.selectedPledge);
+      //_/this.selectedPledge.money = money;
+      //_/this.$emit('submitpledge', this.selectedPledge);
+      this.rewardsCopy.raised += money;
+      this.$emit("submitpledge", this.rewardsCopy);
     },
   },
 };
