@@ -11,7 +11,6 @@
         v-for="reward in rewardsCopy"
         :key="reward.id"
         :reward="reward"
-        :checked="reward.selected"
         @selectoption="handleSelectOption"
         @valuesubmit="handleSubmit"
       />
@@ -51,7 +50,7 @@ export default {
     },
     handleSelectOption(rewardId) {
       
-      //this.$emit("selectoption");
+      //_/this.$emit("selectoption");
       //_/this.selectedPledge.id = rewardId;
       this.rewardsCopy.forEach((reward) => {
         if ((reward.id === rewardId)) {
