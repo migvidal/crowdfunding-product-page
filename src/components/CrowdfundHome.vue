@@ -43,6 +43,7 @@
       <pledge-modal
         v-if="this.showModal"
         :rewards="this.rewards"
+        @selectoption="resetSelected"
         @modalclose="handleModalClose"
         @submitpledge="updateRewards"
       />
@@ -108,11 +109,11 @@ export default {
   },
   methods: {
     updateRewards(selectedPledge) {
-      this.rewards.forEach(reward => {
+      this.rewards.forEach((reward) => {
         if (reward.id == selectedPledge.id) {
           reward.raised += selectedPledge.money;
         }
-      })
+      });
     },
     logResult(r) {
       console.log(r);
@@ -132,6 +133,11 @@ export default {
       this.rewards.forEach((reward) => {
         let isSelected = reward.id == selectedId;
         reward.selected = isSelected;
+      });
+    },
+    resetSelected() {
+      this.rewards.forEach((reward) => {
+        reward.isSelected = false;
       });
     },
     letBodyScroll(scrollable = true) {

@@ -49,6 +49,7 @@ export default {
       console.log(r);
     },
     handleSelectOption(rewardId) {
+      this.$emit('selectoption');
       this.selectedPledge.id = rewardId;
     },
     handleSubmit(money) {

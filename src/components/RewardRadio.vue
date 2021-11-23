@@ -1,12 +1,12 @@
 <template>
   <!-- if it's a reward pledge... -->
-  <div :class="['reward', { selected: reward.selected }]">
+  <div :class="['reward', { selected: reward.checked }]">
     <!-- visible part -->
     <div class="radio-card">
       <input
         type="radio"
         name="reward"
-        :checked="reward.selected"
+        :checked="this.checked"
         :ref="inputID"
         :id="inputID"
         @change="handleChange"
@@ -39,11 +39,12 @@ export default {
   data() {
     return {
       
+      checked: false, //acts both as initial check and as style
     };
   },
   methods: {
     handleChange() {
-      //this.selectedPledge.id(this.reward.id)
+      this.checked = true;
       this.$emit("selectoption", this.reward.id);
     },
     handleSubmit(money) {
@@ -55,6 +56,9 @@ export default {
       return "reward-" + this.reward.id;
     },
   },
+  created() {
+    this.checked = this.reward.checked;
+  }
 };
 </script>
 
