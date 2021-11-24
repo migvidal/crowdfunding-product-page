@@ -49,20 +49,24 @@ export default {
       console.log(r);
     },
     handleSelectOption(rewardId) {
-      
       //_/this.$emit("selectoption");
       //_/this.selectedPledge.id = rewardId;
       this.rewardsCopy.forEach((reward) => {
-        if ((reward.id === rewardId)) {
+        if (reward.id === rewardId) {
           reward.selected = true;
         } else reward.selected = false;
       });
     },
-    handleSubmit(money) {
+    handleSubmit(rewardId, money) {
       //_/this.selectedPledge.money = money;
       //_/this.$emit('submitpledge', this.selectedPledge);
-      this.rewardsCopy.raised += money;// add the money
-      this.$emit("submitpledge", this.rewardsCopy);//send the copy
+      this.rewardsCopy.forEach((reward) => {
+        if (reward.id === rewardId) {
+          reward.raised += money; // add the money
+          this.$emit("submitpledge", this.rewardsCopy); //se podría emitir solo el objeto cambiado
+        }
+      });
+      //open modal
     },
   },
 };
