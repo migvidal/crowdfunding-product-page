@@ -8,7 +8,7 @@
         A beautiful & handcrafted monitor stand to reduce neck and eye strain
       </p>
       <div class="action-buttons">
-        <button @click="openModal" class="back-project">
+        <button @click="openPledgeModal" class="back-project">
           Back this project
         </button>
         <!-- Subscribe/Subscribed -->
@@ -37,16 +37,18 @@
         v-for="reward in this.rewards"
         :key="reward.id"
         :reward="reward"
-        @btnclick="openModal(reward.id)"
+        @btnclick="openPledgeModal(reward.id)"
       />
       <!-- modal -->
       <pledge-modal
-        v-if="this.showModal"
+        v-if="this.showPledgeModal"
         :rewards="this.rewards"
         @selectoption="resetSelected"
         @modalclose="handleModalClose"
         @submitpledge="updateRewards"
       />
+      <!-- success modal -->
+      <ModalCompleted v-if="this.showModalCompleted" />
     </section>
   </main>
 </template>
@@ -55,6 +57,7 @@
 import CFStats from "./CFStats.vue";
 import RewardCard from "./RewardCard.vue";
 import PledgeModal from "./PledgeModal.vue";
+import ModalCompleted from "./ModalCompleted.vue";
 
 export default {
   name: "CrowdfundHome",
@@ -62,6 +65,7 @@ export default {
     CFStats,
     RewardCard,
     PledgeModal,
+    ModalCompleted,
   },
   data() {
     return {
@@ -105,28 +109,32 @@ export default {
           selected: false,
         },
       ],
-      showModal: false,
+      showPledgeModal: false,
+      showModalCompleted: false,
     };
   },
   methods: {
     updateRewards(updatedPledges) {
-      console.log(updatedPledges);
       this.rewards = updatedPledges;
+      // show success modal
+      this.letBodyScroll(false);
+      this.showModalCompleted = true;
     },
     logResult(r) {
       console.log(r);
     },
-    openModal(selectedId) {
+    openPledgeModal(selectedId) {
       this.rewards[selectedId].selected = true;
-      /* || false; */
       this.letBodyScroll(false);
-      this.showModal = true;
+      this.showPledgeModal = true;
     },
+
     handleModalClose() {
       this.rewards.forEach((reward) => (reward.selected = false));
       this.letBodyScroll();
-      this.showModal = false;
+      this.showPledgeModal = false;
     },
+
     updateSelected(selectedId) {
       this.rewards.forEach((reward) => {
         let isSelected = reward.id == selectedId;
@@ -181,10 +189,32 @@ button {
   border: $card-border;
   border-radius: $radius;
 }
+//for the modal
+.modal-bg {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.5);
+  //background-color: black;
+  .modal {
+    position: relative;
+    margin: 20px auto;
+    padding: 2rem;
+
+    width: 90%;
+    background-color: white;
+    border-radius: $radius;
+    overflow: auto;
+  }
+}
 </style>
 <style lang="scss" scoped>
 main.home {
-  //for the modal
   position: relative;
   z-index: 10;
   header,
