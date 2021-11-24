@@ -61,8 +61,8 @@ export default {
     handleSubmit(money) {
       //_/this.selectedPledge.money = money;
       //_/this.$emit('submitpledge', this.selectedPledge);
-      this.rewardsCopy.raised += money;
-      this.$emit("submitpledge", this.rewardsCopy);
+      this.rewardsCopy.raised += money;// add the money
+      this.$emit("submitpledge", this.rewardsCopy);//send the copy
     },
   },
 };
