@@ -1,7 +1,11 @@
 <template>
-  <div class="modal-bg" @keydown.esc="$emit('modalclose')" tabindex="0">
+  <div class="modal-bg" @keydown.esc="this.emitCloseModal()" tabindex="0">
     <div class="modal">
-      <button class="modal-close-button" @click="$emit('modalclose')" autofocus>
+      <button
+        class="modal-close-button"
+        @click="this.emitCloseModal()"
+        autofocus
+      >
         <img src="../images/icon-close-modal.svg" aria-hidden="true" />
       </button>
       <h2>Back this project</h2>
@@ -14,30 +18,25 @@
         @selectoption="handleSelectOption"
         @valuesubmit="handleSubmit"
       />
-
-      <modal-completed v-if="this.showModal" />
     </div>
   </div>
 </template>
 
 <script>
 import RewardRadio from "./RewardRadio.vue";
-import ModalCompleted from "./ModalCompleted.vue";
 
 export default {
   name: "PledgeModal",
-  emits: ["selectoption", "submitpledge"],
+  emits: ["selectoption", "submitpledge", "modalclose"],
 
   components: {
     RewardRadio,
-    ModalCompleted,
   },
   props: {
     rewards: Array,
   },
   data() {
     return {
-      showModal: false,
       rewardsCopy: this.rewards,
       selectedPledge: {
         id: null,
@@ -46,8 +45,8 @@ export default {
     };
   },
   methods: {
-    logResult(r) {
-      console.log(r);
+    emitCloseModal() {
+      this.$emit("modalclose");
     },
     handleSelectOption(rewardId) {
       //_/this.$emit("selectoption");
@@ -67,7 +66,8 @@ export default {
           this.$emit("submitpledge", this.rewardsCopy); //se podría emitir solo el objeto cambiado
         }
       });
-      //open completed modal
+      //close this modal
+      this.emitCloseModal();
     },
   },
 };

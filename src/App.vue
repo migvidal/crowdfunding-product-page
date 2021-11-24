@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ 'no-scroll': modalOpen }">
+  <div>
     <CFNav />
     <CrowdfundHome />
   </div>
