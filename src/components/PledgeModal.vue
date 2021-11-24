@@ -15,14 +15,14 @@
         @valuesubmit="handleSubmit"
       />
 
-      <!-- <completed-modal hidden/> -->
+      <modal-completed hidden/>
     </div>
   </div>
 </template>
 
 <script>
 import RewardRadio from "./RewardRadio.vue";
-import CompletedModal from "./CompletedModal.vue";
+import ModalCompleted from "./ModalCompleted.vue";
 
 export default {
   name: "PledgeModal",
@@ -30,7 +30,7 @@ export default {
 
   components: {
     RewardRadio,
-    CompletedModal,
+    ModalCompleted,
   },
   props: {
     rewards: Array,
