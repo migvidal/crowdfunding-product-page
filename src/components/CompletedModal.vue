@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: "SuccessModal",
+  name: "CompletedModal",
   props: {
   },
 };

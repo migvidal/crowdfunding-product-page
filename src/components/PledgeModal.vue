@@ -15,14 +15,14 @@
         @valuesubmit="handleSubmit"
       />
 
-      <!-- <success-modal hidden/> -->
+      <!-- <completed-modal hidden/> -->
     </div>
   </div>
 </template>
 
 <script>
 import RewardRadio from "./RewardRadio.vue";
-import SuccessModal from "./SuccessModal.vue";
+import CompletedModal from "./CompletedModal.vue";
 
 export default {
   name: "PledgeModal",
@@ -30,7 +30,7 @@ export default {
 
   components: {
     RewardRadio,
-    SuccessModal,
+    CompletedModal,
   },
   props: {
     rewards: Array,
@@ -66,7 +66,8 @@ export default {
           this.$emit("submitpledge", this.rewardsCopy); //se podría emitir solo el objeto cambiado
         }
       });
-      //open modal
+      //open completed modal
+      
     },
   },
 };
