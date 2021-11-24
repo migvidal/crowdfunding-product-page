@@ -15,7 +15,7 @@
         @valuesubmit="handleSubmit"
       />
 
-      <modal-completed hidden/>
+      <modal-completed v-if="this.showModal" />
     </div>
   </div>
 </template>
@@ -37,6 +37,7 @@ export default {
   },
   data() {
     return {
+      showModal: false,
       rewardsCopy: this.rewards,
       selectedPledge: {
         id: null,
@@ -67,7 +68,6 @@ export default {
         }
       });
       //open completed modal
-      
     },
   },
 };
