@@ -1,5 +1,5 @@
 <template>
-  <div class="modal-bg">
+  <div class="modal-bg" @keydown.esc="$emit('modalclose')" tabindex="0">
     <div class="modal">
       <h2>Thanks for your support!</h2>
       <p>
@@ -7,14 +7,15 @@
         Monitor Riser worldwide. You will get an email once our campaign is
         completed.
       </p>
-      <button>Got it!</button>
+      <button @click="$emit('modalclose')">Got it!</button>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "CompletedModal",
+  name: "SuccessModal",
+  emits: ["modalclose"],
   props: {},
 };
 </script>

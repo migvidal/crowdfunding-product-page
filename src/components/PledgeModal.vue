@@ -63,12 +63,10 @@ export default {
       this.rewardsCopy.forEach((reward) => {
         if (reward.id === rewardId) {
           reward.raised += money; // add the money
-          reward.units && reward.units --; // substract units if it has pledge
+          reward.units && reward.units--; // substract units if it has pledge
           this.$emit("submitpledge", this.rewardsCopy); //se podría emitir solo el objeto cambiado
         }
       });
-      //close this modal
-      this.emitCloseModal();
     },
   },
 };

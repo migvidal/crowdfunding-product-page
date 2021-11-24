@@ -41,14 +41,17 @@
       />
       <!-- modal -->
       <pledge-modal
-        v-if="this.showPledgeModal"
+        v-if="this.pledgeModalVisible"
         :rewards="this.rewards"
         @selectoption="resetSelected"
         @modalclose="handleModalClose"
         @submitpledge="updateRewards"
       />
       <!-- success modal -->
-      <ModalCompleted v-if="this.showModalCompleted" />
+      <success-modal
+        v-if="this.successModalVisible"
+        @modalclose="handleModalClose"
+      />
     </section>
   </main>
 </template>
@@ -57,7 +60,7 @@
 import CFStats from "./CFStats.vue";
 import RewardCard from "./RewardCard.vue";
 import PledgeModal from "./PledgeModal.vue";
-import ModalCompleted from "./ModalCompleted.vue";
+import SuccessModal from "./SuccessModal.vue";
 
 export default {
   name: "CrowdfundHome",
@@ -65,7 +68,7 @@ export default {
     CFStats,
     RewardCard,
     PledgeModal,
-    ModalCompleted,
+    SuccessModal,
   },
   data() {
     return {
@@ -109,8 +112,8 @@ export default {
           selected: false,
         },
       ],
-      showPledgeModal: false,
-      showModalCompleted: false,
+      pledgeModalVisible: false,
+      successModalVisible: false,
     };
   },
   methods: {
@@ -118,7 +121,8 @@ export default {
       this.rewards = updatedPledges;
       // show success modal
       this.letBodyScroll(false);
-      this.showModalCompleted = true;
+      this.handleModalClose();
+      this.successModalVisible = true;
     },
     logResult(r) {
       console.log(r);
@@ -126,13 +130,14 @@ export default {
     openPledgeModal(selectedId) {
       this.rewards[selectedId].selected = true;
       this.letBodyScroll(false);
-      this.showPledgeModal = true;
+      this.pledgeModalVisible = true;
     },
 
     handleModalClose() {
       this.rewards.forEach((reward) => (reward.selected = false));
       this.letBodyScroll();
-      this.showPledgeModal = false;
+      this.pledgeModalVisible = false;
+      this.successModalVisible = false;
     },
 
     updateSelected(selectedId) {

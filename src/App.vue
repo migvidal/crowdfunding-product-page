@@ -16,8 +16,7 @@ export default {
     CFNav,
   },
   data() {
-    return {
-    };
+    return {};
   },
 };
 </script>
@@ -46,7 +45,6 @@ p {
 h1 {
   line-height: 1.3;
 }
-
 
 #app {
   background-image: url("./images/image-hero-mobile.jpg");
