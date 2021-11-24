@@ -42,7 +42,7 @@ export default {
       this.$emit("selectoption", this.reward.id);
     },
     handleSubmit(money) {
-      this.$emit("valuesubmit", money);
+      this.$emit("valuesubmit", this.reward.id, money);
     },
   },
   computed: {
