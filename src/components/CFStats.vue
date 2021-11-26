@@ -1,7 +1,12 @@
 <template>
   <section class="stats">
-    <div><strong class="display-text">x</strong>of $100,000 backed</div>
-    <div><strong class="display-text">x</strong> total backers</div>
+    <div>
+      <strong class="display-text">{{ totalBacked }}</strong
+      >of $100,000 backed
+    </div>
+    <div>
+      <strong class="display-text">{{ backerCount }}</strong> total backers
+    </div>
     <div>
       <strong class="display-text">{{ daysLeft }}</strong> days left
     </div>
@@ -13,7 +18,7 @@ const MS_PER_DAY = 1000 * 60 * 60 * 24;
 export default {
   name: "CFStats",
   props: {
-    moneyBacked: Number,
+    totalBacked: Number,
     backerCount: Number,
   },
   data() {

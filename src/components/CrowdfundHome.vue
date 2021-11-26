@@ -22,7 +22,7 @@
       </div>
     </header>
     <!-- stats -->
-    <CFStats />
+    <CFStats :backerCount="this.backerCount" />
 
     <!-- about and rewards -->
     <section class="rewards">
@@ -76,6 +76,8 @@ export default {
         "The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen to a more comfortable viewing height. Placing your monitor at eye level has the potential to improve your posture and make you more comfortable while at work, helping you stay focused on the task at hand.",
         "Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your computer to allow notepads, pens, and USB sticks to be stored under the stand.",
       ],
+      backerCount: 0,
+      totalBacked: 0,
       rewards: [
         {
           id: 0,
@@ -116,9 +118,14 @@ export default {
       successModalVisible: false,
     };
   },
+  computed: {
+    /* totalBacked() {}, */
+  },
   methods: {
     updateRewards(updatedPledges) {
+      //update data
       this.rewards = updatedPledges;
+      this.backerCount++;
       // show success modal
       this.letBodyScroll(false);
       this.handleModalClose();
