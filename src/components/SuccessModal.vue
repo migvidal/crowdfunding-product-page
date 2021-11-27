@@ -7,7 +7,7 @@
         Monitor Riser worldwide. You will get an email once our campaign is
         completed.
       </p>
-      <button @click="$emit('modalclose')">Got it!</button>
+      <button @click="$emit('modalclose')" tabindex="0">Got it!</button>
     </div>
   </div>
 </template>

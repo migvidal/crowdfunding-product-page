@@ -1,7 +1,7 @@
 <template>
   <div class="reward card">
     <h2>{{ reward.name || "Pledge with no reward" }}</h2>
-    <p v-if="reward.pledge">Pledge ${{ reward.pledge }} or more</p>
+    <p v-if="reward.minPledge">Pledge ${{ reward.minPledge }} or more</p>
     <p>{{ reward.description }}</p>
     <p v-if="reward.units">
       <strong class="display-text">{{ reward.units }} </strong> left

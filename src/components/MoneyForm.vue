@@ -7,7 +7,7 @@
         <input
           v-model="this.money"
           type="number"
-          min="1"
+          :min="minPledge"
           max="1000"
           inputmode="numeric"
           name="money"
@@ -22,6 +22,9 @@
 <script>
 export default {
   name: "MoneyForm",
+  props: {
+    minPledge: Number,
+  },
   data() {
     return {
       money: 0,

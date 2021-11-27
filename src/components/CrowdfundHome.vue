@@ -91,7 +91,7 @@ export default {
           description:
             "You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list",
           units: 101,
-          pledge: 25,
+          minPledge: 25,
           selected: false,
         },
         {
@@ -100,7 +100,7 @@ export default {
           description:
             "You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer member list. Shipping is included.",
           units: 64,
-          pledge: 75,
+          minPledge: 75,
           selected: false,
         },
         {
@@ -109,7 +109,7 @@ export default {
           description:
             "You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to our Backer member list. Shipping is included.",
           units: 0,
-          pledge: 100,
+          minPledge: 100,
           selected: false,
         },
       ],

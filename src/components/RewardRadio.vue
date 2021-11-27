@@ -20,7 +20,7 @@
       />
       <label :for="inputID">
         {{ reward.name || "Pledge with no reward" }}
-        <p v-if="reward.pledge">Pledge ${{ reward.pledge }} or more</p>
+        <p v-if="reward.minPledge">Pledge ${{ reward.minPledge }} or more</p>
       </label>
       <p>{{ reward.description }}</p>
       <p v-if="reward.units">
@@ -28,7 +28,11 @@
       </p>
     </div>
     <!-- hidden form -->
-    <MoneyForm v-if="reward.selected" @valuesubmit="handleSubmit" />
+    <MoneyForm
+      v-if="reward.selected"
+      :minPledge="reward.minPledge"
+      @valuesubmit="handleSubmit"
+    />
   </div>
 </template>
 
