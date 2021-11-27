@@ -62,7 +62,6 @@ export default {
       //_/this.$emit('submitpledge', this.selectedPledge);
       this.rewardsCopy.forEach((reward) => {
         if (reward.id === rewardId) {
-          reward.raised += money; // add the money
           reward.units && reward.units--; // substract units if it has pledge
           this.$emit("submitpledge", reward.id, money); //emits submitted data
         }

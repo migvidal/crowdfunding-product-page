@@ -1,7 +1,7 @@
 <template>
   <section class="stats">
     <div>
-      <strong class="display-text">{{ totalBacked }}</strong
+      <strong class="display-text">{{ totalRaised }}</strong
       >of $100,000 backed
     </div>
     <div>
@@ -18,7 +18,7 @@ const MS_PER_DAY = 1000 * 60 * 60 * 24;
 export default {
   name: "CFStats",
   props: {
-    totalBacked: Number,
+    totalRaised: Number,
     backerCount: Number,
   },
   data() {
