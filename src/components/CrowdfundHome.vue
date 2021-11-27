@@ -22,7 +22,7 @@
       </div>
     </header>
     <!-- stats -->
-    <CFStats :backerCount="this.backerCount" />
+    <CFStats :totalBacked="this.totalBacked" :backerCount="this.backerCount" />
 
     <!-- about and rewards -->
     <section class="rewards">
@@ -122,10 +122,16 @@ export default {
     /* totalBacked() {}, */
   },
   methods: {
-    updateRewards(updatedPledges) {
+    updateRewards(id, money) {
       //update data
-      this.rewards = updatedPledges;
-      this.backerCount++;
+      this.rewards.forEach((reward) => {
+        if (reward.id === id) {
+          reward.raised += money; // add the money
+          this.totalBacked += money; // add to total
+          reward.units && reward.units--; // substract units if it has pledge
+          this.backerCount++;
+        }
+      });
       // show success modal
       this.letBodyScroll(false);
       this.handleModalClose();

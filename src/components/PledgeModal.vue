@@ -64,7 +64,7 @@ export default {
         if (reward.id === rewardId) {
           reward.raised += money; // add the money
           reward.units && reward.units--; // substract units if it has pledge
-          this.$emit("submitpledge", this.rewardsCopy); //se podría emitir solo el objeto cambiado
+          this.$emit("submitpledge", reward.id, money); //emits submitted data
         }
       });
     },
