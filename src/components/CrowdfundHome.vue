@@ -141,7 +141,9 @@ export default {
       console.log(r);
     },
     openPledgeModal(selectedId) {
-      this.rewards[selectedId].selected = true;
+      if (!isNaN(Number.parseInt(selectedId))) {
+        this.rewards[selectedId].selected = true;
+      }
       this.letBodyScroll(false);
       this.pledgeModalVisible = true;
     },
