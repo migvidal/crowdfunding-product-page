@@ -65,8 +65,7 @@ export default {
 .reward {
   margin: 1rem 0;
   &.disabled {
-    cursor: default;
-    opacity: 0.8;
+    opacity: 0.5;
   }
   & > * {
     padding: 1rem;
@@ -84,15 +83,18 @@ export default {
       margin-right: 15px;
       background-color: transparent;
       border: 5px solid white;
-      box-shadow: 0 0 0 2px $dark-gray;
+      box-shadow: 0 0 0 2px #eee;
       cursor: pointer;
+      &:disabled {
+        cursor: not-allowed;
+      }
     }
     label {
       display: inline-block;
       font-weight: $bolder;
       line-height: 1;
       vertical-align: middle;
-      cursor: pointer;
+      //      cursor: pointer;
 
       p {
         font-weight: $bold;
