@@ -12,7 +12,10 @@
           Back this project
         </button>
         <!-- Subscribe/Subscribed -->
-        <button class="bookmark">
+        <button
+          :class="['bookmark', { bookmarked: this.bookmarked }]"
+          @click="this.bookmarked = !this.bookmarked"
+        >
           <img
             src="../images/icon-bookmark.svg"
             alt="Bookmark"
@@ -78,6 +81,7 @@ export default {
       ],
       backerCount: 0,
       totalRaised: 0,
+      bookmarked: false,
       rewards: [
         {
           id: 0,
@@ -199,6 +203,9 @@ button {
   &.bookmark {
     background: none;
     padding: 0;
+    &.bookmarked {
+      background: $moderate-cyan;
+    }
   }
 }
 .display-text {
