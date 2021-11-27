@@ -62,10 +62,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/* custom radio */
-
 .reward {
   margin: 1rem 0;
+  &.disabled {
+    cursor: default;
+    opacity: 0.8;
+  }
   & > * {
     padding: 1rem;
   }
@@ -73,6 +75,7 @@ export default {
     border-color: $moderate-cyan;
   }
   .radio-card {
+    /* custom radio */
     input[type="radio"] {
       appearance: none;
       width: 21px;
