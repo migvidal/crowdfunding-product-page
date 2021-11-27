@@ -192,6 +192,7 @@ button {
   }
   &:disabled {
     background-color: #ccc;
+    cursor: default;
   }
   &.back-project {
     flex: 1;
