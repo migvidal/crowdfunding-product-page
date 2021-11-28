@@ -202,34 +202,6 @@ button {
     background-color: #ccc;
     cursor: default;
   }
-  &.back-project {
-    flex: 1;
-    margin-right: 1rem;
-  }
-  &.bookmark {
-    background: none;
-    padding: 0;
-
-    svg {
-      circle {
-        fill: $dark-gray;
-      }
-      path {
-        fill: #fff;
-      }
-    }
-
-    &.bookmarked {
-      svg {
-        circle {
-          fill: $moderate-cyan;
-        }
-        path {
-          fill: #fff;
-        }
-      }
-    }
-  }
 }
 .display-text {
   font-size: 3rem;
@@ -288,6 +260,36 @@ main.home {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      button {
+        &.back-project {
+          flex: 1;
+          margin-right: 1rem;
+        }
+        &.bookmark {
+          background: none;
+          padding: 0;
+
+          svg {
+            circle {
+              fill: $dark-gray;
+            }
+            path {
+              fill: #fff;
+            }
+          }
+
+          &.bookmarked {
+            svg {
+              circle {
+                fill: $moderate-cyan;
+              }
+              path {
+                fill: #fff;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
