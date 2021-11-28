@@ -16,11 +16,17 @@
           :class="['bookmark', { bookmarked: this.bookmarked }]"
           @click="this.bookmarked = !this.bookmarked"
         >
-          <img
+          <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" fill-rule="evenodd">
+              <circle fill="" cx="28" cy="28" r="28" />
+              <path fill="" d="M23 19v18l5-5.058L33 37V19z" />
+            </g>
+          </svg>
+          <!-- <img
             src="../images/icon-bookmark.svg"
             alt="Bookmark"
             aria-hidden="true"
-          />
+          /> -->
         </button>
       </div>
     </header>
@@ -203,8 +209,25 @@ button {
   &.bookmark {
     background: none;
     padding: 0;
+
+    svg {
+      circle {
+        fill: $dark-gray;
+      }
+      path {
+        fill: #fff;
+      }
+    }
+
     &.bookmarked {
-      background: $moderate-cyan;
+      svg {
+        circle {
+          fill: $moderate-cyan;
+        }
+        path {
+          fill: #fff;
+        }
+      }
     }
   }
 }
