@@ -268,6 +268,7 @@ main.home {
         &.bookmark {
           background: none;
           padding: 0;
+          max-height: 56px; // fit the svg snugly
 
           svg {
             circle {
