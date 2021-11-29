@@ -15,13 +15,26 @@
       </li>
     </ul>
   </nav>
+  <cf-modal v-show="this.mobileMenuVisible">
+    <floating-nav />
+  </cf-modal>
 </template>
 
 <script>
+import CfModal from "./CfModal.vue";
+import FloatingNav from "./FloatingNav.vue";
+
 export default {
   name: "CFNav",
+  components: {
+    CfModal,
+    FloatingNav,
+  },
   props: {
     msg: String,
+  },
+  data() {
+    return { mobileMenuVisible: false };
   },
 };
 </script>

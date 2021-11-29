@@ -49,19 +49,22 @@
         :reward="reward"
         @btnclick="openPledgeModal(reward.id)"
       />
-      <!-- modal -->
-      <pledge-modal
-        v-if="this.pledgeModalVisible"
-        :rewards="this.rewards"
-        @selectoption="resetSelected"
-        @modalclose="handleModalClose"
-        @submitpledge="updateRewards"
-      />
-      <!-- success modal -->
-      <success-modal
-        v-if="this.successModalVisible"
-        @modalclose="handleModalClose"
-      />
+
+      <cf-modal v-show="this.pledgeModalVisible || this.successModalVisible">
+        <!-- modal -->
+        <pledge-modal
+          v-if="this.pledgeModalVisible"
+          :rewards="this.rewards"
+          @selectoption="resetSelected"
+          @modalclose="handleModalClose"
+          @submitpledge="updateRewards"
+        />
+        <!-- success modal -->
+        <success-modal
+          v-if="this.successModalVisible"
+          @modalclose="handleModalClose"
+        />
+      </cf-modal>
     </section>
   </main>
 </template>
@@ -71,6 +74,7 @@ import CFStats from "./CFStats.vue";
 import RewardCard from "./RewardCard.vue";
 import PledgeModal from "./PledgeModal.vue";
 import SuccessModal from "./SuccessModal.vue";
+import CfModal from "./CfModal.vue";
 
 export default {
   name: "CrowdfundHome",
@@ -79,6 +83,7 @@ export default {
     RewardCard,
     PledgeModal,
     SuccessModal,
+    CfModal,
   },
   data() {
     return {
@@ -210,29 +215,6 @@ button {
 .reward {
   border: $card-border;
   border-radius: $radius;
-}
-//for the modal
-.modal-bg {
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(0, 0, 0, 0.5);
-  //background-color: black;
-  .modal {
-    position: relative;
-    margin: 20px auto;
-    padding: 2rem;
-
-    width: 90%;
-    background-color: white;
-    border-radius: $radius;
-    overflow: auto;
-  }
 }
 </style>
 <style lang="scss" scoped>

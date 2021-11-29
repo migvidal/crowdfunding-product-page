@@ -1,25 +1,17 @@
 <template>
-  <div class="modal-bg" @keydown.esc="this.emitCloseModal()" tabindex="0">
-    <div class="modal">
-      <button
-        class="modal-close-button"
-        @click="this.emitCloseModal()"
-        autofocus
-      >
-        <img src="../images/icon-close-modal.svg" aria-hidden="true" />
-      </button>
-      <h2>Back this project</h2>
+  <button class="modal-close-button" @click="this.emitCloseModal()" autofocus>
+    <img src="../images/icon-close-modal.svg" aria-hidden="true" />
+  </button>
+  <h2>Back this project</h2>
 
-      <!-- Radio cards -->
-      <reward-radio
-        v-for="reward in rewardsCopy"
-        :key="reward.id"
-        :reward="reward"
-        @selectoption="handleSelectOption"
-        @valuesubmit="handleSubmit"
-      />
-    </div>
-  </div>
+  <!-- Radio cards -->
+  <reward-radio
+    v-for="reward in rewardsCopy"
+    :key="reward.id"
+    :reward="reward"
+    @selectoption="handleSelectOption"
+    @valuesubmit="handleSubmit"
+  />
 </template>
 
 <script>
@@ -72,22 +64,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.modal-bg {
-  .modal {
-    position: relative;
-    margin: 20px auto;
-    padding: 2rem;
-    height: 100%;
-    width: 90%;
-    background-color: white;
-    border-radius: $radius;
-    overflow: auto;
-    button.modal-close-button {
-      float: right;
-      background: none;
-      padding: 0;
-      margin: 10px;
-    }
-  }
+button.modal-close-button {
+  float: right;
+  background: none;
+  padding: 0;
+  margin: 10px;
 }
 </style>
