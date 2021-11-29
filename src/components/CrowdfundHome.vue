@@ -13,6 +13,7 @@
         </button>
         <!-- Subscribe/Subscribed -->
         <button
+          title="Bookmark"
           :class="['bookmark', { bookmarked: this.bookmarked }]"
           @click="this.bookmarked = !this.bookmarked"
         >
