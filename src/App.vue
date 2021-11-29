@@ -1,19 +1,22 @@
 <template>
   <div>
-    <CFNav />
-    <CrowdfundHome />
+    <c-f-nav />
+    <floating-nav />
+    <crowdfund-home />
   </div>
 </template>
 
 <script>
 import CrowdfundHome from "./components/CrowdfundHome.vue";
 import CFNav from "./components/CFNav.vue";
+import FloatingNav from "./components/FloatingNav.vue";
 
 export default {
   name: "App",
   components: {
     CrowdfundHome,
     CFNav,
+    FloatingNav,
   },
   data() {
     return {};
