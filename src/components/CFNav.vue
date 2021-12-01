@@ -1,9 +1,9 @@
 <template>
   <nav class="menu">
-    <ul>
-      <li class="logo">
-        <a href="#"><img src="../images/logo.svg" alt="" /></a>
-      </li>
+    <div class="logo">
+      <a href="#"><img src="../images/logo.svg" alt="" /></a>
+    </div>
+    <ul class="section-links">
       <li>
         <a href="#">About</a>
       </li>
@@ -48,14 +48,23 @@ export default {
 
 <style lang="scss" scoped>
 nav.menu {
-  //background-color: darkblue;
+  display: flex;
+  align-items: center;
   color: white;
   padding: 0.1rem;
+  & > * {
+    margin: 1rem 10px !important;
+  }
+
   a {
     color: white;
     text-decoration: none;
   }
-  ul {
+  .logo {
+    flex: 10;
+    min-width: 100px;
+  }
+  ul.section-links {
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
@@ -63,13 +72,8 @@ nav.menu {
     & > li {
       flex: 2;
       list-style: none;
-      margin: 0 0.5rem;
+      margin: 0 0.3rem;
       white-space: nowrap;
-
-      &.logo {
-        flex: 10;
-        min-width: 100px;
-      }
     }
   }
 }
