@@ -31,20 +31,20 @@ export default {
 <style lang="scss" scoped>
 nav.menu {
   position: relative;
-  margin: 20px auto;
-  padding: 2rem;
+  //margin: 20px auto;
+  //padding: 2rem;
   height: 100%;
   width: 90%;
-  background-color: white;
-  color: $black !important;
   .sections {
     display: block;
     background-color: #fff;
-    ul > li {
-      display: block;
-    }
-    a {
-      color: $black !important;
+    ul {
+      li {
+        display: block;
+        a {
+          color: $black !important;
+        }
+      }
     }
   }
 }

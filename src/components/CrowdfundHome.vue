@@ -226,7 +226,6 @@ main.home {
   z-index: 10;
   header,
   section {
-    //mixin?
     margin: 2rem;
     padding: 2rem;
     border-radius: $radius;

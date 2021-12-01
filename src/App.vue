@@ -1,7 +1,6 @@
 <template>
   <div>
     <c-f-nav />
-
     <crowdfund-home />
   </div>
 </template>

@@ -14,15 +14,16 @@
         <a href="#">Get Started</a>
       </li>
     </ul>
+    <button class="hamburger-icon" @click="this.mobileMenuVisible = true">
+      <svg width="16" height="15" xmlns="http://www.w3.org/2000/svg">
+        <g fill="#FFF" fill-rule="evenodd">
+          <path d="M0 0h16v3H0zM0 6h16v3H0zM0 12h16v3H0z" />
+        </g>
+      </svg>
+    </button>
   </nav>
-  <div class="hamburger-icon" hidden>
-    <svg width="16" height="15" xmlns="http://www.w3.org/2000/svg">
-      <g fill="#FFF" fill-rule="evenodd">
-        <path d="M0 0h16v3H0zM0 6h16v3H0zM0 12h16v3H0z" />
-      </g>
-    </svg>
-  </div>
-  <cf-modal v-show="this.mobileMenuVisible">
+
+  <cf-modal @modalclose="handleModalClose" v-show="this.mobileMenuVisible">
     <floating-nav />
   </cf-modal>
 </template>
@@ -43,9 +44,29 @@ export default {
   data() {
     return { mobileMenuVisible: false };
   },
+  methods: {
+    letBodyScroll(scrollable = true) {
+      let body = document.getElementsByTagName("body")[0];
+      body.classList.remove("no-scroll");
+      if (!scrollable) body.classList.add("no-scroll");
+    },
+    handleModalClose() {
+      this.letBodyScroll;
+      this.mobileMenuVisible = false;
+    },
+  },
 };
 </script>
 
+/* Unscoped styles */
+<style lang="scss">
+a {
+  color: white;
+  text-decoration: none;
+}
+</style>
+
+/* Scoped styles */
 <style lang="scss" scoped>
 nav.menu {
   display: flex;
@@ -56,10 +77,6 @@ nav.menu {
     margin: 1rem 10px !important;
   }
 
-  a {
-    color: white;
-    text-decoration: none;
-  }
   .logo {
     flex: 10;
     min-width: 100px;
@@ -79,15 +96,20 @@ nav.menu {
 }
 
 .hamburger-icon {
+  cursor: pointer;
+  background: none;
+  padding: 0;
   display: none;
 }
 
 @media screen and (max-width: $mobile) {
   nav.menu {
-    display: none;
-  }
-  .hamburger-icon {
-    display: block;
+    ul.section-links {
+      display: none;
+    }
+    .hamburger-icon {
+      display: block;
+    }
   }
 }
 </style>
