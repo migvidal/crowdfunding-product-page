@@ -14,8 +14,7 @@ export default {
   name: "App",
   components: {
     CrowdfundHome,
-    
-    
+
     CFNav,
   },
   data() {

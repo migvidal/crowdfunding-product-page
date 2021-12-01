@@ -50,7 +50,10 @@
         @btnclick="openPledgeModal(reward.id)"
       />
 
-      <cf-modal v-show="this.pledgeModalVisible || this.successModalVisible">
+      <cf-modal
+        v-show="this.pledgeModalVisible || this.successModalVisible"
+        @modalclose="handleModalClose"
+      >
         <!-- modal -->
         <pledge-modal
           v-if="this.pledgeModalVisible"

@@ -1,5 +1,10 @@
 <template>
-  <div class="modal-bg" @keydown.esc="$emit('modalclose')" tabindex="0">
+  <div
+    class="modal-bg"
+    @keydown.esc="$emit('modalclose')"
+    @click="handleBgClick"
+    tabindex="0"
+  >
     <div class="modal">
       <slot></slot>
     </div>
@@ -9,6 +14,14 @@
 <script>
 export default {
   name: "CfModal",
+  methods: {
+    handleBgClick(e) {
+      //closes modal when bg clicked
+      if (e.target.classList.contains("modal-bg")) {
+        this.$emit("modalclose");
+      }
+    },
+  },
 };
 </script>
 
@@ -28,7 +41,6 @@ export default {
     position: relative;
     margin: 20px auto;
     padding: 2rem;
-
     width: 90%;
     background-color: white;
     border-radius: $radius;

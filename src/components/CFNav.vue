@@ -15,6 +15,13 @@
       </li>
     </ul>
   </nav>
+  <div class="hamburger-icon" hidden>
+    <svg width="16" height="15" xmlns="http://www.w3.org/2000/svg">
+      <g fill="#FFF" fill-rule="evenodd">
+        <path d="M0 0h16v3H0zM0 6h16v3H0zM0 12h16v3H0z" />
+      </g>
+    </svg>
+  </div>
   <cf-modal v-show="this.mobileMenuVisible">
     <floating-nav />
   </cf-modal>
@@ -51,7 +58,8 @@ nav.menu {
   ul {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    padding: 0;
     & > li {
       flex: 2;
       list-style: none;
@@ -60,9 +68,22 @@ nav.menu {
 
       &.logo {
         flex: 10;
-        min-width: 120px;
+        min-width: 100px;
       }
     }
+  }
+}
+
+.hamburger-icon {
+  display: none;
+}
+
+@media screen and (max-width: $mobile) {
+  nav.menu {
+    display: none;
+  }
+  .hamburger-icon {
+    display: block;
   }
 }
 </style>
