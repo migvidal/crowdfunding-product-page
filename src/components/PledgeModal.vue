@@ -1,17 +1,19 @@
 <template>
-  <button class="modal-close-button" @click="this.emitCloseModal()" autofocus>
-    <img src="../images/icon-close-modal.svg" aria-hidden="true" />
-  </button>
-  <h2>Back this project</h2>
+  <div class="modal-inner">
+    <button class="modal-close-button" @click="this.emitCloseModal()" autofocus>
+      <img src="../images/icon-close-modal.svg" aria-hidden="true" />
+    </button>
+    <h2>Back this project</h2>
 
-  <!-- Radio cards -->
-  <reward-radio
-    v-for="reward in rewardsCopy"
-    :key="reward.id"
-    :reward="reward"
-    @selectoption="handleSelectOption"
-    @valuesubmit="handleSubmit"
-  />
+    <!-- Radio cards -->
+    <reward-radio
+      v-for="reward in rewardsCopy"
+      :key="reward.id"
+      :reward="reward"
+      @selectoption="handleSelectOption"
+      @valuesubmit="handleSubmit"
+    />
+  </div>
 </template>
 
 <script>

@@ -25,6 +25,14 @@ export default {
 };
 </script>
 
+<!-- Unscoped styles -->
+<style lang="scss">
+.modal-inner {
+  padding: 2rem;
+}
+</style>
+
+<!-- Scoped styles -->
 <style lang="scss" scoped>
 .modal-bg {
   position: fixed;
@@ -40,7 +48,7 @@ export default {
   .modal {
     position: relative;
     margin: 20px auto;
-    padding: 2rem;
+
     width: 90%;
     background-color: white;
     border-radius: $radius;

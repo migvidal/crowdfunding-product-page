@@ -58,7 +58,7 @@ export default {
 };
 </script>
 
-/* Unscoped styles */
+<!-- Unscoped styles -->
 <style lang="scss">
 a {
   color: white;
@@ -66,7 +66,7 @@ a {
 }
 </style>
 
-/* Scoped styles */
+<!-- Scoped styles -->
 <style lang="scss" scoped>
 nav.menu {
   display: flex;
@@ -94,7 +94,6 @@ nav.menu {
     }
   }
 }
-
 .hamburger-icon {
   cursor: pointer;
   background: none;

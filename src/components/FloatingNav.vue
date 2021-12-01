@@ -1,13 +1,15 @@
 <template>
-  <nav class="menu">
+  <nav class="floating-menu">
     <div class="sections">
       <ul>
         <li>
           <a href="#">About</a>
         </li>
+        <hr />
         <li>
           <a href="#">Discover</a>
         </li>
+        <hr />
         <li>
           <a href="#">Get Started</a>
         </li>
@@ -29,21 +31,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-nav.menu {
+nav.floating-menu {
   position: relative;
-  //margin: 20px auto;
-  //padding: 2rem;
   height: 100%;
-  width: 90%;
   .sections {
     display: block;
     background-color: #fff;
     ul {
+      margin: 0;
+      padding: 0;
       li {
         display: block;
+        margin: 1.5rem 1.2rem;
+
         a {
           color: $black !important;
+          font-weight: $bold;
         }
+      }
+      hr {
+        border: none;
+        height: 1px;
+        color: $black;
       }
     }
   }
