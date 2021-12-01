@@ -1,6 +1,6 @@
 <template>
   <nav class="floating-menu">
-    <div class="sections">
+    <div class="section-links">
       <ul>
         <li>
           <a href="#">About</a>
@@ -34,7 +34,7 @@ export default {
 nav.floating-menu {
   position: relative;
   height: 100%;
-  .sections {
+  .section-links {
     display: block;
     background-color: #fff;
     ul {
