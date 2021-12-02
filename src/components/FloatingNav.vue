@@ -42,7 +42,7 @@ nav.floating-menu {
       padding: 0;
       li {
         display: block;
-        margin: 1.5rem 1.2rem;
+        margin: 1.2rem 1rem;
 
         a {
           color: $black !important;
@@ -50,9 +50,8 @@ nav.floating-menu {
         }
       }
       hr {
-        border: none;
-        height: 1px;
-        color: $black;
+        border: 0px;
+        border-top: thin solid $light-gray;
       }
     }
   }
