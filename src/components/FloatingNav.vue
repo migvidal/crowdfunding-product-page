@@ -21,12 +21,6 @@
 <script>
 export default {
   name: "FloatingNav",
-  props: {},
-  data() {
-    return {
-      visible: false,
-    };
-  },
 };
 </script>
 
@@ -55,7 +49,5 @@ nav.floating-menu {
       }
     }
   }
-}
-@media screen and (max-width: $mobile) {
 }
 </style>

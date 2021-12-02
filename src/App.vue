@@ -1,7 +1,8 @@
 <template>
   <div>
-    <c-f-nav />
-    <crowdfund-home />
+    <c-f-nav @hamburgerclick="this.mobileMenuVisible = true" />
+
+    <crowdfund-home :initialMobileMenuVisible="this.mobileMenuVisible" />
   </div>
 </template>
 
@@ -17,7 +18,7 @@ export default {
     CFNav,
   },
   data() {
-    return {};
+    return { mobileMenuVisible: false };
   },
 };
 </script>

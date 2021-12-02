@@ -2,6 +2,7 @@
   <div
     class="modal-bg"
     @keydown.esc="$emit('modalclose')"
+    @keydown.enter="logHasSlot"
     @click="handleBgClick"
     tabindex="0"
   >
@@ -14,12 +15,21 @@
 <script>
 export default {
   name: "CfModal",
+  computed: {
+    hasSlot() {
+      return !!this.$slots.default;
+    },
+  },
   methods: {
     handleBgClick(e) {
       //closes modal when bg clicked
       if (e.target.classList.contains("modal-bg")) {
         this.$emit("modalclose");
       }
+    },
+    logHasSlot() {
+      console.log(this.$slots.default);
+      return false;
     },
   },
 };

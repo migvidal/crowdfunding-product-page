@@ -51,9 +51,11 @@
       />
 
       <cf-modal
-        v-show="this.pledgeModalVisible || this.successModalVisible"
+        v-if="mobileMenuVisible || pledgeModalVisible || successModalVisible"
         @modalclose="handleModalClose"
       >
+        <!-- floating menu -->
+        <floating-nav v-if="this.mobileMenuVisible" />
         <!-- modal -->
         <pledge-modal
           v-if="this.pledgeModalVisible"
@@ -78,6 +80,7 @@ import RewardCard from "./RewardCard.vue";
 import PledgeModal from "./PledgeModal.vue";
 import SuccessModal from "./SuccessModal.vue";
 import CfModal from "./CfModal.vue";
+import FloatingNav from "./FloatingNav.vue";
 
 export default {
   name: "CrowdfundHome",
@@ -87,6 +90,10 @@ export default {
     PledgeModal,
     SuccessModal,
     CfModal,
+    FloatingNav,
+  },
+  props: {
+    initialMobileMenuVisible: Boolean,
   },
   data() {
     return {
@@ -132,6 +139,7 @@ export default {
           selected: false,
         },
       ],
+      mobileMenuVisible: this.initialMobileMenuVisible,
       pledgeModalVisible: false,
       successModalVisible: false,
     };
@@ -140,6 +148,10 @@ export default {
     /* totalRaised() {}, */
   },
   methods: {
+    logHasSlot() {
+      console.log(!!this.$slots.default);
+      return false;
+    },
     updateRewards(id, money) {
       //update data
       this.rewards.forEach((reward) => {
@@ -170,6 +182,7 @@ export default {
       this.letBodyScroll();
       this.pledgeModalVisible = false;
       this.successModalVisible = false;
+      this.mobileMenuVisible = false;
     },
 
     updateSelected(selectedId) {
