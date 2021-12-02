@@ -1,21 +1,16 @@
 <template>
   <div>
-    <c-f-nav @hamburgerclick="this.mobileMenuVisible = true" />
-
     <crowdfund-home :initialMobileMenuVisible="this.mobileMenuVisible" />
   </div>
 </template>
 
 <script>
 import CrowdfundHome from "./components/CrowdfundHome.vue";
-import CFNav from "./components/CFNav.vue";
 
 export default {
   name: "App",
   components: {
     CrowdfundHome,
-
-    CFNav,
   },
   data() {
     return { mobileMenuVisible: false };

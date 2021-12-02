@@ -1,5 +1,6 @@
 <template>
   <main class="home">
+    <c-f-nav @hamburgerclick="this.mobileMenuVisible = true" />
     <!-- header -->
     <header class="header">
       <img class="logo" src="../images/logo-mastercraft.svg" alt="" srcset="" />
@@ -80,6 +81,8 @@ import RewardCard from "./RewardCard.vue";
 import PledgeModal from "./PledgeModal.vue";
 import SuccessModal from "./SuccessModal.vue";
 import CfModal from "./CfModal.vue";
+import CFNav from "./CFNav.vue";
+
 import FloatingNav from "./FloatingNav.vue";
 
 export default {
@@ -90,11 +93,11 @@ export default {
     PledgeModal,
     SuccessModal,
     CfModal,
+    CFNav,
+
     FloatingNav,
   },
-  props: {
-    initialMobileMenuVisible: Boolean,
-  },
+
   data() {
     return {
       description: [
@@ -139,7 +142,7 @@ export default {
           selected: false,
         },
       ],
-      mobileMenuVisible: this.initialMobileMenuVisible,
+      mobileMenuVisible: false,
       pledgeModalVisible: false,
       successModalVisible: false,
     };

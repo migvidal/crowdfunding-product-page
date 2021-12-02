@@ -32,23 +32,6 @@ export default {
   components: {
     CfModal,
   },
-  props: {
-    msg: String,
-  },
-  data() {
-    return { mobileMenuVisible: false };
-  },
-  methods: {
-    letBodyScroll(scrollable = true) {
-      let body = document.getElementsByTagName("body")[0];
-      body.classList.remove("no-scroll");
-      if (!scrollable) body.classList.add("no-scroll");
-    },
-    handleModalClose() {
-      this.letBodyScroll;
-      this.mobileMenuVisible = false;
-    },
-  },
 };
 </script>
 
