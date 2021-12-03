@@ -39,6 +39,7 @@ nav.floating-menu {
         margin: 1.2rem 1rem;
 
         a {
+          display: block;
           color: $black !important;
           font-weight: $bold;
         }

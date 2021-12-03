@@ -57,8 +57,7 @@ export default {
   overflow: auto;
   .modal {
     position: relative;
-    margin: 20px auto;
-
+    margin: 60px auto;
     width: 90%;
     background-color: white;
     border-radius: $radius;

@@ -1,6 +1,8 @@
 <template>
   <main class="home">
-    <c-f-nav @hamburgerclick="this.mobileMenuVisible = true" />
+    <c-f-nav
+      @hamburgerclick="this.mobileMenuVisible = !this.mobileMenuVisible"
+    />
     <!-- header -->
     <header class="header">
       <img class="logo" src="../images/logo-mastercraft.svg" alt="" srcset="" />
