@@ -151,10 +151,13 @@ export default {
     /* totalRaised() {}, */
   },
   methods: {
-    logHasSlot() {
-      console.log(!!this.$slots.default);
-      return false;
+    onResize() {
+      let mediaQuery = "screen and (max-width: 375px)";
+      if (!window.matchMedia(mediaQuery).matches) {
+        this.mobileMenuVisible = false;
+      }
     },
+
     updateRewards(id, money) {
       //update data
       this.rewards.forEach((reward) => {
@@ -204,6 +207,13 @@ export default {
       body.classList.remove("no-scroll");
       if (!scrollable) body.classList.add("no-scroll");
     },
+  },
+  mounted() {
+    window.addEventListener("resize", this.onResize);
+  },
+
+  beforeUnmount() {
+    window.removeEventListener("resize", this.onResize);
   },
 };
 </script>
