@@ -57,14 +57,11 @@ export default {
   components: {
     CfModal,
   },
-  data() {
-    return {
-      floatingMenuOpen: false,
-    };
+  props: {
+    floatingMenuOpen: Boolean,
   },
   methods: {
     handleHamburgerButton() {
-      this.floatingMenuOpen = !this.floatingMenuOpen;
       this.$emit("hamburgerclick");
     },
   },

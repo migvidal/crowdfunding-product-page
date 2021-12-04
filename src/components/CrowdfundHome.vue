@@ -1,7 +1,8 @@
 <template>
   <main class="home">
     <c-f-nav
-      @hamburgerclick="this.mobileMenuVisible = !this.mobileMenuVisible"
+      :floatingMenuOpen="mobileMenuVisible"
+      @hamburgerclick="mobileMenuVisible = !mobileMenuVisible"
     />
     <!-- header -->
     <header class="header">
