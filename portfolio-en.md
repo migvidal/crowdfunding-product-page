@@ -12,6 +12,7 @@ A place to explore and upload 3d models. PHP based web app. Final project for my
 
 [<i class="fab fa-github"></i> GitHub](https://github.com/migvidal/dimensional)
 
+
 ## VidalWP
 
 Simple and elegant WordPress theme. Styles in Bootstrap and Sass.

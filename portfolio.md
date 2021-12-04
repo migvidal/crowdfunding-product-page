@@ -12,6 +12,7 @@ Galería online para explorar y subir modelos 3d. App web basada en PHP. Proyect
 
 [<i class="fab fa-github"></i> GitHub](https://github.com/migvidal/dimensional)
 
+
 ## VidalWP
 
 Tema WordPress básico y elegante. Estilos mediante Bootstrap y Sass.
