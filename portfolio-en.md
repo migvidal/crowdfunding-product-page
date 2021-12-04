@@ -8,7 +8,7 @@ title: My projects
 
 A place to explore and upload 3d models. PHP based web app. Final project for my Web Development technical degree.
 
-[![Dimensional](assets/images/projects/dimensional-poster.png)](http://dimensional3.000webhostapp.com/)
+[![Dimensional](assets/images/projects/dimensional-poster.png)](https://github.com/migvidal/dimensional)
 
 [<i class="fab fa-github"></i> GitHub](https://github.com/migvidal/dimensional)
 
