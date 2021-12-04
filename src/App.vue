@@ -46,11 +46,17 @@ h1 {
 #app {
   background-image: url("./images/image-hero-mobile.jpg");
   background-repeat: no-repeat;
-  background-size: 500px;
+  background-size: 600px;
   background-position: top center;
   background-color: #eee;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+@media screen and (min-width: $desktop) {
+  #app {
+    background-image: url("./images/image-hero-desktop.jpg");
+    background-size: 1920px;
+  }
 }
 </style>
