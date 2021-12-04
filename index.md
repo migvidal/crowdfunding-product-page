@@ -17,7 +17,6 @@ Actualmente aprendiendo <span class="vue-color">Vue.js</span> y haciendo proyect
 
 
 [Mi portfolio](/portfolio) · [<i class="fab fa-github"></i>](https://github.com/migvidal/) · [<i class="fab fa-linkedin-in"></i>](https://www.linkedin.com/in/miguel-vidal-funcia-121035167/)
-
 <br>
 
-**[View in English](/portfolio-en)**
+**[My portfolio (in English)](/portfolio-en)**

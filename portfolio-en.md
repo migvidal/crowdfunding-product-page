@@ -21,4 +21,6 @@ Simple and elegant WordPress theme. Styles in Bootstrap and Sass.
 
 [<i class="fab fa-github"></i> GitHub](https://github.com/migvidal/vidalwp)
 
+**[Ver en Español](/portfolio)**
+
 **[&#8592; Go back](./)**
