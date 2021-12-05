@@ -255,8 +255,9 @@ main.home {
   z-index: 10;
   header,
   section {
-    margin: 2rem;
+    margin: 2rem auto;
     padding: 2rem;
+    width: clamp(250px, 600px, 90vw);
     border-radius: $radius;
     background-color: #fff;
   }
