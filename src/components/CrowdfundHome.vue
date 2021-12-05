@@ -16,23 +16,24 @@
           Back this project
         </button>
         <!-- Subscribe/Subscribed -->
-        <button
-          title="Bookmark"
-          :class="['bookmark', { bookmarked: this.bookmarked }]"
-          @click="this.bookmarked = !this.bookmarked"
-        >
-          <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg">
-            <g fill="none" fill-rule="evenodd">
-              <circle fill="" cx="28" cy="28" r="28" />
-              <path fill="" d="M23 19v18l5-5.058L33 37V19z" />
-            </g>
-          </svg>
-          <!-- <img
-            src="../images/icon-bookmark.svg"
-            alt="Bookmark"
-            aria-hidden="true"
-          /> -->
-        </button>
+        <div class="bookmark-wrapper">
+          <button
+            title="Bookmark"
+            :class="['bookmark', { bookmarked: this.bookmarked }]"
+            @click="this.bookmarked = !this.bookmarked"
+          >
+            <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" fill-rule="evenodd">
+                <circle fill="" cx="28" cy="28" r="28" />
+                <path fill="" d="M23 19v18l5-5.058L33 37V19z" />
+              </g>
+            </svg>
+          </button>
+          <div v-show="!this.bookmarked" class="bookmarked-label">Bookmark</div>
+          <div v-show="this.bookmarked" class="bookmarked-label">
+            Bookmarked
+          </div>
+        </div>
       </div>
     </header>
     <!-- stats -->
@@ -273,7 +274,8 @@ main.home {
 
     .action-buttons {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
+      align-items: flex-start;
       justify-content: space-between;
       button {
         &.back-project {
@@ -281,9 +283,12 @@ main.home {
           margin-right: 1rem;
         }
         &.bookmark {
+          display: inline;
+          vertical-align: middle;
           background: none;
           padding: 0;
           max-height: 56px; // fit the svg snugly
+          z-index: 1;
 
           svg {
             circle {
@@ -307,6 +312,25 @@ main.home {
         }
       }
     }
+  }
+}
+// Bookmark button special design
+.bookmark-wrapper {
+  display: flex;
+  align-items: center;
+  .bookmarked-label {
+    background-color: $light-gray;
+    border-top-right-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    padding: 12px 20px 12px 35px;
+    margin-left: -20px;
+    z-index: 0;
+    font-weight: $bolder;
+  }
+}
+@media screen and (max-width: $mobile) {
+  .bookmarked-label {
+    visibility: hidden;
   }
 }
 </style>
