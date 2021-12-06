@@ -4,7 +4,7 @@
     <p v-if="reward.minPledge">Pledge ${{ reward.minPledge }} or more</p>
     <p>{{ reward.description }}</p>
     <p v-if="reward.units">
-      <strong class="display-text">{{ reward.units }} </strong> left
+      <big-text>{{ reward.units }} </big-text> left
     </p>
     <cf-button
       @click="$emit('btnclick')"
@@ -29,7 +29,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .reward.card {
   padding: 1rem;
   margin: 1rem 0;

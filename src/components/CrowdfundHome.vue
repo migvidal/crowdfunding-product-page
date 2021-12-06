@@ -210,9 +210,7 @@ export default {
 button {
   border: none;
 }
-.display-text {
-  font-size: 3rem;
-}
+
 .reward {
   border: $card-border;
   border-radius: $radius;

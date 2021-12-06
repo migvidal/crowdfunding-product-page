@@ -1,14 +1,14 @@
 <template>
   <div class="stats">
     <div>
-      <strong class="display-text">{{ totalRaised }}</strong
+      <big-text class="big-text">{{ totalRaised }}</big-text
       >of $100,000 backed
     </div>
     <div>
-      <strong class="display-text">{{ backerCount }}</strong> total backers
+      <big-text class="big-text">{{ backerCount }}</big-text> total backers
     </div>
     <div>
-      <strong class="display-text">{{ daysLeft }}</strong> days left
+      <big-text class="big-text">{{ daysLeft }}</big-text> days left
     </div>
   </div>
 </template>
@@ -40,7 +40,7 @@ export default {
 .stats {
   text-align: center;
 }
-strong.display-text {
+.big-text {
   display: block;
 }
 </style>
