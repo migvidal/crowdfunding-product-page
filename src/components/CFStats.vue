@@ -1,5 +1,5 @@
 <template>
-  <section class="stats">
+  <div class="stats">
     <div>
       <strong class="display-text">{{ totalRaised }}</strong
       >of $100,000 backed
@@ -10,7 +10,7 @@
     <div>
       <strong class="display-text">{{ daysLeft }}</strong> days left
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -36,11 +36,11 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-section.stats {
+<style scoped>
+.stats {
   text-align: center;
-  strong.display-text {
-    display: block;
-  }
+}
+strong.display-text {
+  display: block;
 }
 </style>
