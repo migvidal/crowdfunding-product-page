@@ -1,5 +1,5 @@
 <template>
-  <button tabindex="0">
+  <button>
     <slot>Button</slot>
   </button>
 </template>
@@ -7,9 +7,6 @@
 <script>
 export default {
   name: "CfButton",
-  props: {
-    emittedEvent: String,
-  },
 };
 </script>
 
