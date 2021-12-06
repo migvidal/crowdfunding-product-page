@@ -6,17 +6,19 @@
     <p v-if="reward.units">
       <strong class="display-text">{{ reward.units }} </strong> left
     </p>
-    <button
+    <cf-button
       @click="$emit('btnclick')"
       :disabled="reward.id !== 0 && !reward.units"
     >
       {{ reward.id === 0 || reward.units ? "Select Reward" : "Out of Stock" }}
-    </button>
+    </cf-button>
   </div>
 </template>
 
 <script>
+import CfButton from "./CfButton.vue";
 export default {
+  components: { CfButton },
   name: "RewardCard",
   props: {
     reward: Object,

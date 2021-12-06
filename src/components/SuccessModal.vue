@@ -6,7 +6,7 @@
       Monitor Riser worldwide. You will get an email once our campaign is
       completed.
     </p>
-    <button @click="$emit('modalclose')" tabindex="0">Got it!</button>
+    <cf-button @click="$emit('modalclose')" tabindex="0">Got it!</cf-button>
   </div>
 </template>
 

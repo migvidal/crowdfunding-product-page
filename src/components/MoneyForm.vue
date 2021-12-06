@@ -14,13 +14,15 @@
           id="money"
         />
       </div>
-      <button type="submit">Continue</button>
+      <cf-button type="submit">Continue</cf-button>
     </form>
   </div>
 </template>
 
 <script>
+import CfButton from "./CfButton.vue";
 export default {
+  components: { CfButton },
   name: "MoneyForm",
   props: {
     minPledge: Number,

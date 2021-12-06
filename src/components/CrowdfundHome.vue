@@ -14,7 +14,7 @@
 
     <!-- stats -->
     <section>
-      <CFStats
+      <CfStats
         :totalRaised="this.totalRaised"
         :backerCount="this.backerCount"
       />
@@ -62,7 +62,7 @@
 
 <script>
 import CfHeader from "./CfHeader.vue";
-import CFStats from "./CFStats.vue";
+import CfStats from "./CfStats.vue";
 import RewardCard from "./RewardCard.vue";
 import PledgeModal from "./PledgeModal.vue";
 import SuccessModal from "./SuccessModal.vue";
@@ -75,7 +75,7 @@ export default {
   name: "CrowdfundHome",
   components: {
     CfHeader,
-    CFStats,
+    CfStats,
     RewardCard,
     PledgeModal,
     SuccessModal,
@@ -207,6 +207,9 @@ export default {
 
 <!-- Unscoped styles -->
 <style lang="scss">
+button {
+  border: none;
+}
 .display-text {
   font-size: 3rem;
 }
