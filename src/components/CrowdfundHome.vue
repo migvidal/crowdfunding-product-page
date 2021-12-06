@@ -11,6 +11,7 @@
         @bookmarkclick="this.bookmarked = !this.bookmarked"
       ></cf-header>
     </header>
+
     <!-- stats -->
     <section>
       <CFStats
@@ -206,24 +207,6 @@ export default {
 
 <!-- Unscoped styles -->
 <style lang="scss">
-button {
-  border: none;
-  border-radius: 999px;
-  padding: 1rem;
-  white-space: nowrap;
-  color: #fff;
-  font-weight: bold !important;
-  background-color: $moderate-cyan;
-  max-width: 230px;
-  cursor: pointer;
-  &:hover {
-    background-color: $dark-cyan;
-  }
-  &:disabled {
-    background-color: #ccc;
-    cursor: default;
-  }
-}
 .display-text {
   font-size: 3rem;
 }

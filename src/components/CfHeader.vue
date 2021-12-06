@@ -3,12 +3,12 @@
   <h1>Mastercraft Bamboo Monitor Riser</h1>
   <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain</p>
   <div class="action-buttons">
-    <button @click="openPledgeModal" class="back-project">
+    <cf-button @click="openPledgeModal" class="back-project">
       Back this project
-    </button>
+    </cf-button>
     <!-- Subscribe/Subscribed -->
     <div class="bookmark-wrapper">
-      <button
+      <cf-button
         title="Bookmark"
         :class="['bookmark', { bookmarked: this.bookmarked }]"
         @click="$emit('bookmarkclick')"
@@ -19,7 +19,7 @@
             <path fill="" d="M23 19v18l5-5.058L33 37V19z" />
           </g>
         </svg>
-      </button>
+      </cf-button>
       <div v-show="!this.bookmarked" class="bookmarked-label">Bookmark</div>
       <div v-show="this.bookmarked" class="bookmarked-label">Bookmarked</div>
     </div>
