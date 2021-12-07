@@ -3,7 +3,7 @@
   <h1>Mastercraft Bamboo Monitor Riser</h1>
   <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain</p>
   <div class="action-buttons">
-    <cf-button @click="openPledgeModal" class="back-project">
+    <cf-button @click="$emit('backprojectclick')" class="back-project">
       Back this project
     </cf-button>
     <!-- Bookmark -->

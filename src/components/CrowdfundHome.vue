@@ -9,6 +9,7 @@
       <cf-header
         :bookmarked="this.bookmarked"
         @bookmarkclick="this.bookmarked = !this.bookmarked"
+        @backprojectclick="openPledgeModal"
       ></cf-header>
     </header>
 
