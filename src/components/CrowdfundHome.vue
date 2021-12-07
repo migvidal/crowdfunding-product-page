@@ -226,6 +226,9 @@ button {
   border-radius: $radius;
   background-color: #fff;
 }
+.header {
+  padding: 1rem;
+}
 
 @media screen and (max-width: $mobile) {
   .bookmarked-label {

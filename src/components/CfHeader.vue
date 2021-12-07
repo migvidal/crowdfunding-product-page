@@ -1,7 +1,9 @@
 <template>
-  <img class="logo" src="../images/logo-mastercraft.svg" alt="" srcset="" />
-  <h1>Mastercraft Bamboo Monitor Riser</h1>
-  <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain</p>
+  <div class="info">
+    <img class="logo" src="../images/logo-mastercraft.svg" alt="" srcset="" />
+    <h1>Mastercraft Bamboo Monitor Riser</h1>
+    <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain</p>
+  </div>
   <div class="action-buttons">
     <cf-button @click="$emit('backprojectclick')" class="back-project">
       Back this project
@@ -31,6 +33,9 @@ export default {
 
 <!-- Scoped styles -->
 <style lang="scss" scoped>
+.info {
+  margin: 0 1rem;
+}
 img.logo {
   margin: 0 auto;
   margin-top: -60px;
