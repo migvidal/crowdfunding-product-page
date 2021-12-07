@@ -210,7 +210,6 @@ export default {
 button {
   border: none;
 }
-
 .reward {
   border: $card-border;
   border-radius: $radius;

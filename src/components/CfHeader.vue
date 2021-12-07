@@ -43,12 +43,12 @@ p {
 .action-buttons {
   display: flex;
   flex-wrap: nowrap;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   button {
     &.back-project {
       flex: 1;
-      margin-right: 1rem;
+      margin-right: 8px;
     }
   }
 }

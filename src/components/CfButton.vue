@@ -14,7 +14,7 @@ export default {
 button {
   border: none;
   border-radius: 999px;
-  padding: 1rem;
+  padding: 0.8rem 1rem;
   white-space: nowrap;
   color: #fff;
   font-weight: bold !important;
