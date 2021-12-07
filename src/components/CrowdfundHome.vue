@@ -14,7 +14,7 @@
     </header>
 
     <!-- stats -->
-    <section>
+    <section class="stats">
       <CfStats
         :totalRaised="this.totalRaised"
         :backerCount="this.backerCount"
@@ -217,17 +217,14 @@ button {
 }
 </style>
 <style lang="scss" scoped>
-main.home {
-  position: relative;
-  z-index: 10;
-  header,
-  section {
-    margin: 2rem auto;
-    padding: 2rem;
-    width: clamp(250px, 600px, 90vw);
-    border-radius: $radius;
-    background-color: #fff;
-  }
+.header,
+.stats,
+.rewards {
+  margin: 2rem auto;
+  padding: 2rem;
+  width: clamp(250px, 600px, 90vw);
+  border-radius: $radius;
+  background-color: #fff;
 }
 
 @media screen and (max-width: $mobile) {

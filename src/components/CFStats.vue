@@ -1,15 +1,13 @@
 <template>
-  <div class="stats">
-    <div>
-      <big-text class="big-text">{{ totalRaised }}</big-text
-      >of $100,000 backed
-    </div>
-    <div>
-      <big-text class="big-text">{{ backerCount }}</big-text> total backers
-    </div>
-    <div>
-      <big-text class="big-text">{{ daysLeft }}</big-text> days left
-    </div>
+  <div class="stat">
+    <big-text class="big-text">{{ totalRaised }}</big-text
+    >of $100,000 backed
+  </div>
+  <div class="stat">
+    <big-text class="big-text">{{ backerCount }}</big-text> total backers
+  </div>
+  <div class="stat">
+    <big-text class="big-text">{{ daysLeft }}</big-text> days left
   </div>
 </template>
 
@@ -37,7 +35,7 @@ export default {
 </script>
 
 <style scoped>
-.stats {
+.stat {
   text-align: center;
 }
 .big-text {
