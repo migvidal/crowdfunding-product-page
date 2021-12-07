@@ -1,5 +1,5 @@
 <template>
-  <div class="reward card">
+  <div class="rounded-card reward">
     <h2>{{ reward.name || "Pledge with no reward" }}</h2>
     <p v-if="reward.minPledge">Pledge ${{ reward.minPledge }} or more</p>
     <p>{{ reward.description }}</p>
@@ -30,7 +30,7 @@ export default {
 </script>
 
 <style scoped>
-.reward.card {
+.rounded-card.reward {
   padding: 1rem;
   margin: 1rem 0;
 }

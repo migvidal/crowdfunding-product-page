@@ -6,9 +6,9 @@
     <cf-button @click="openPledgeModal" class="back-project">
       Back this project
     </cf-button>
-    <!-- Subscribe/Subscribed -->
+    <!-- Bookmark -->
     <bookmark-button
-      :class="['bookmark', { bookmarked: this.bookmarked }]"
+      :bookmarked="this.bookmarked"
       @click="$emit('bookmarkclick')"
     ></bookmark-button>
   </div>
@@ -50,48 +50,6 @@ p {
       flex: 1;
       margin-right: 1rem;
     }
-    &.bookmark {
-      display: inline;
-      vertical-align: middle;
-      background: none;
-      padding: 0;
-      max-height: 56px; // fit the svg snugly
-      z-index: 1;
-
-      svg {
-        circle {
-          fill: $dark-gray;
-        }
-        path {
-          fill: #fff;
-        }
-      }
-
-      &.bookmarked {
-        svg {
-          circle {
-            fill: $moderate-cyan;
-          }
-          path {
-            fill: #fff;
-          }
-        }
-      }
-    }
-  }
-}
-// Bookmark button special design
-.bookmark-wrapper {
-  display: flex;
-  align-items: center;
-  .bookmarked-label {
-    background-color: $light-gray;
-    border-top-right-radius: 9999px;
-    border-bottom-right-radius: 9999px;
-    padding: 12px 20px 12px 35px;
-    margin-left: -20px;
-    z-index: 0;
-    font-weight: $bolder;
   }
 }
 </style>
