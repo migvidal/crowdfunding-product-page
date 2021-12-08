@@ -13,5 +13,6 @@ hr {
   border: 0px;
   background-color: #eee;
   width: 1px;
+  margin: 0 1.2rem;
 }
 </style>

@@ -56,7 +56,7 @@ export default {
   display: none;
 }
 
-@media screen and (max-width: $mobile-landscape) {
+@media screen and (max-width: $mobile) {
   .stats-container {
     flex-direction: column;
   }
