@@ -4,7 +4,7 @@ import App from "./App.vue";
 import CfButton from "./components/CfButton.vue";
 import DisplayText from "./components/DisplayText.vue";
 import BookmarkButton from "./components/BookmarkButton.vue";
-import CfVerticalSep from "./components/CfHorizontalSep.vue";
+import CfVerticalSep from "./components/CfVerticalSep.vue";
 import CfHorizontalSep from "./components/CfHorizontalSep.vue";
 
 const app = createApp(App);

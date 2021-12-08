@@ -4,13 +4,14 @@
 
 <script>
 export default {
-  name: "CfVerticalSep",
+  name: "CfHorizontalSep",
 };
 </script>
 
 <style lang="scss" scoped>
 hr {
   border: 0px;
-  border-top: $card-border;
+  background-color: #eee;
+  width: 1px;
 }
 </style>
