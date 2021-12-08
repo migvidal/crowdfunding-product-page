@@ -5,11 +5,11 @@
         <li>
           <a href="#">About</a>
         </li>
-        <cf-separator />
+        <cf-horizontal-sep />
         <li>
           <a href="#">Discover</a>
         </li>
-        <cf-separator />
+        <cf-horizontal-sep />
         <li>
           <a href="#">Get Started</a>
         </li>
@@ -19,7 +19,9 @@
 </template>
 
 <script>
+import CfHorizontalSep from "./CfHorizontalSep.vue";
 export default {
+  components: { CfHorizontalSep },
   name: "FloatingNav",
 };
 </script>
@@ -43,10 +45,6 @@ nav.floating-menu {
           color: $black !important;
           font-weight: $bold;
         }
-      }
-      hr {
-        border: 0px;
-        border-top: thin solid $light-gray;
       }
     }
   }

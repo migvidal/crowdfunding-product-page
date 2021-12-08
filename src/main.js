@@ -4,11 +4,13 @@ import App from "./App.vue";
 import CfButton from "./components/CfButton.vue";
 import DisplayText from "./components/DisplayText.vue";
 import BookmarkButton from "./components/BookmarkButton.vue";
-import CfSeparator from "./components/CfSeparator.vue";
+import CfVerticalSep from "./components/CfVerticalSep.vue";
+import CfHorizontalSep from "./components/CfHorizontalSep.vue";
 
 const app = createApp(App);
 app.component("cf-button", CfButton);
 app.component("big-text", DisplayText);
 app.component("bookmark-button", BookmarkButton);
-app.component("cf-separator", CfSeparator);
+app.component("cf-vertical-sep", CfVerticalSep);
+app.component("cf-horizontal-sep", CfHorizontalSep);
 app.mount("#app");

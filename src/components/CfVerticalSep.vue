@@ -4,13 +4,15 @@
 
 <script>
 export default {
-  name: "CfSeparator",
+  name: "CfHorizontalSep",
 };
 </script>
 
 <style lang="scss" scoped>
 hr {
   border: 0px;
-  border-top: $card-border;
+  background-color: #eee;
+  width: 1px;
+  margin: 0 1.2rem;
 }
 </style>
