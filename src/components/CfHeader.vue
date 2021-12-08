@@ -31,7 +31,6 @@ export default {
 };
 </script>
 
-<!-- Scoped styles -->
 <style lang="scss" scoped>
 .info {
   margin: 0 1rem;
