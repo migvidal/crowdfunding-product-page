@@ -5,11 +5,11 @@
         <li>
           <a href="#">About</a>
         </li>
-        <hr />
+        <cf-separator />
         <li>
           <a href="#">Discover</a>
         </li>
-        <hr />
+        <cf-separator />
         <li>
           <a href="#">Get Started</a>
         </li>
