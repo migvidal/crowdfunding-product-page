@@ -66,7 +66,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-button.modal-close-button {
+.modal-close-button {
   float: right;
   background: none;
   padding: 0;

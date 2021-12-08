@@ -110,7 +110,6 @@ nav.menu {
   }
 }
 .hamburger-button {
-  cursor: pointer;
   background: none;
   padding: 0;
   display: none;

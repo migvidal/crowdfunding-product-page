@@ -210,6 +210,7 @@ export default {
 <style lang="scss">
 button {
   border: none;
+  cursor: pointer;
 }
 .reward {
   border: $card-border;
