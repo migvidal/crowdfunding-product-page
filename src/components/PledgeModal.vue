@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import RewardRadio from "./RewardRadio.vue";
+import RewardRadio from "./PledgeModalRadio.vue";
 
 export default {
   name: "PledgeModal",
