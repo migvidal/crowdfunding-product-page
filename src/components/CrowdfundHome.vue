@@ -1,6 +1,6 @@
 <template>
   <main class="home">
-    <c-f-nav
+    <cf-nav
       :floatingMenuOpen="mobileMenuVisible"
       @hamburgerclick="mobileMenuVisible = !mobileMenuVisible"
     />
@@ -68,7 +68,7 @@ import RewardCard from "./RewardCard.vue";
 import PledgeModal from "./PledgeModal.vue";
 import SuccessModal from "./SuccessModal.vue";
 import CfModal from "./CfModal.vue";
-import CFNav from "./CFNav.vue";
+import CfNav from "./CfNav.vue";
 
 import FloatingNav from "./FloatingNav.vue";
 
@@ -81,7 +81,7 @@ export default {
     PledgeModal,
     SuccessModal,
     CfModal,
-    CFNav,
+    CfNav,
 
     FloatingNav,
   },

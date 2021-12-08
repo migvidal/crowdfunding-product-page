@@ -53,7 +53,7 @@
 import CfModal from "./CfModal.vue";
 
 export default {
-  name: "CFNav",
+  name: "CfNav",
   components: {
     CfModal,
   },
