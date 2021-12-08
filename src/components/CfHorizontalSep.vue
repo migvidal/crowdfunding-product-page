@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: "CfSeparator",
+  name: "CfVerticalSep",
 };
 </script>
 

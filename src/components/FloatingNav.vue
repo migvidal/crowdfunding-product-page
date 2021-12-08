@@ -5,11 +5,11 @@
         <li>
           <a href="#">About</a>
         </li>
-        <cf-separator />
+        <cf-vertical-sep />
         <li>
           <a href="#">Discover</a>
         </li>
-        <cf-separator />
+        <cf-vertical-sep />
         <li>
           <a href="#">Get Started</a>
         </li>
