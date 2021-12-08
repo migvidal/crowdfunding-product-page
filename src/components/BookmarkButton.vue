@@ -1,6 +1,6 @@
 <template>
   <div class="bookmark-btn-wrapper">
-    <cf-button :class="['bookmark-btn', { bookmarked: this.bookmarked }]">
+    <cf-button id="bookmark-btn" :class="{ bookmarked: this.bookmarked }">
       <svg
         width="52"
         height="52"
@@ -13,8 +13,8 @@
         </g>
       </svg>
     </cf-button>
-    <div v-show="!bookmarked" class="bookmark-btn-label">Bookmark</div>
-    <div v-show="bookmarked" class="bookmark-btn-label">Bookmarked</div>
+    <label v-show="!bookmarked" class="bookmark-btn-label">Bookmark</label>
+    <label v-show="bookmarked" class="bookmark-btn-label">Bookmarked</label>
   </div>
 </template>
 
@@ -41,7 +41,7 @@ export default {
   z-index: 0;
   font-weight: $bolder;
 }
-.bookmark-btn {
+#bookmark-btn {
   display: inline;
   vertical-align: middle;
   background: none;
