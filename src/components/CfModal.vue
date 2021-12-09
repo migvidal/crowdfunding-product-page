@@ -54,14 +54,14 @@ export default {
   width: 100%;
   height: 100%;
   background-color: rgb(0, 0, 0, 0.5);
-  overflow: auto;
+
   .modal {
     position: relative;
     margin: 60px auto;
     width: 90%;
     background-color: white;
     border-radius: $radius;
-    overflow: auto;
+    overflow-y: scroll;
   }
 }
 </style>
