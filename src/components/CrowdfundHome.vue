@@ -218,6 +218,9 @@ button {
 }
 </style>
 <style lang="scss" scoped>
+.home {
+  overflow: auto;
+}
 .header,
 .stats,
 .rewards {
