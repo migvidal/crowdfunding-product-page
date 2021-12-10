@@ -1,4 +1,4 @@
-# clean-slate
+# crowdfund
 
 ## Project setup
 ```
