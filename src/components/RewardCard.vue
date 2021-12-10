@@ -1,17 +1,23 @@
 <template>
-  <div class="rounded-card reward">
-    <h2>{{ reward.name || "Pledge with no reward" }}</h2>
-    <p v-if="reward.minPledge">Pledge ${{ reward.minPledge }} or more</p>
+  <div
+    v-if="reward.id !== 0"
+    :class="[
+      'rounded-card',
+      'reward',
+      {
+        disabled: reward.id !== 0 && !reward.units,
+      },
+    ]"
+  >
+    <h2>{{ reward.name }}</h2>
+    <p>Pledge ${{ reward.minPledge }} or more</p>
     <p>{{ reward.description }}</p>
     <div class="flex-container">
-      <p v-if="reward.units">
-        <big-text>{{ reward.units }} </big-text> left
+      <p>
+        <big-text>{{ reward.units || 0 }} </big-text> left
       </p>
-      <cf-button
-        @click="$emit('btnclick')"
-        :disabled="reward.id !== 0 && !reward.units"
-      >
-        {{ reward.id === 0 || reward.units ? "Select Reward" : "Out of Stock" }}
+      <cf-button @click="$emit('btnclick')" :disabled="!reward.units">
+        {{ reward.units ? "Select Reward" : "Out of Stock" }}
       </cf-button>
     </div>
   </div>
@@ -35,6 +41,9 @@ export default {
 .rounded-card.reward {
   padding: 1rem;
   margin: 1rem 0;
+}
+.disabled {
+  opacity: 0.5;
 }
 .flex-container {
   display: flex;
