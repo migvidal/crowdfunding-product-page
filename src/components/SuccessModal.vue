@@ -18,4 +18,10 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.modal-inner {
+  max-width: 500px;
+  height: auto;
+  padding: 2rem;
+}
+</style>

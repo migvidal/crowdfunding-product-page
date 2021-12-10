@@ -1,5 +1,5 @@
 <template>
-  <nav class="floating-menu">
+  <nav class="modal-inner">
     <div class="section-links">
       <ul>
         <li>
@@ -27,24 +27,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-nav.floating-menu {
+.modal-inner {
   position: relative;
+  width: 85vw;
   height: 100%;
-  .section-links {
-    display: block;
-    background-color: #fff;
-    ul {
-      margin: 0;
-      padding: 0;
-      li {
-        display: block;
-        margin: 1.2rem 1rem;
+}
+.section-links {
+  display: block;
+  background-color: #fff;
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      display: block;
+      margin: 1.2rem 1rem;
 
-        a {
-          display: block;
-          color: $black !important;
-          font-weight: $bold;
-        }
+      a {
+        display: block;
+        color: $black !important;
+        font-weight: $bold;
       }
     }
   }

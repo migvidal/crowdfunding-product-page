@@ -35,16 +35,12 @@ export default {
 };
 </script>
 
-<!-- Unscoped styles -->
-<style lang="scss">
-.modal-inner {
-  padding: 2rem;
-}
-</style>
-
 <!-- Scoped styles -->
 <style lang="scss" scoped>
 .modal-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   z-index: 100;
   top: 0;
@@ -57,11 +53,11 @@ export default {
 }
 .modal {
   position: relative;
-  margin: 60px auto;
-  width: 90%;
+  //margin: 60px auto;
+  max-width: 90%;
+  max-height: 90%;
   background-color: white;
   border-radius: $radius;
   overflow: auto;
-  max-height: 100%;
 }
 </style>

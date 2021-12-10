@@ -66,6 +66,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.modal-inner {
+  max-width: 700px;
+  padding: 2rem;
+}
 .modal-close-button {
   float: right;
   background: none;
