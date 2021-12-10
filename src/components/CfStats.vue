@@ -48,6 +48,7 @@ export default {
 <style lang="scss" scoped>
 .stats-container {
   display: flex;
+  justify-content: space-evenly;
 }
 .big-text {
   display: block;
