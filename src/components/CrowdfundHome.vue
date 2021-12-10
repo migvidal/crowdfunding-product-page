@@ -135,9 +135,6 @@ export default {
       successModalVisible: false,
     };
   },
-  computed: {
-    /* totalRaised() {}, */
-  },
   methods: {
     onResize() {
       let mediaQuery = "screen and (max-width: 375px)";
@@ -159,9 +156,6 @@ export default {
       this.letBodyScroll(false);
       this.handleModalClose();
       this.successModalVisible = true;
-    },
-    logResult(r) {
-      console.log(r);
     },
     openPledgeModal(selectedId) {
       if (!isNaN(Number.parseInt(selectedId))) {

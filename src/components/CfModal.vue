@@ -2,7 +2,6 @@
   <div
     class="modal-bg"
     @keydown.esc="$emit('modalclose')"
-    @keydown.enter="logHasSlot"
     @click="handleBgClick"
     tabindex="0"
   >
@@ -26,10 +25,6 @@ export default {
       if (e.target.classList.contains("modal-bg")) {
         this.$emit("modalclose");
       }
-    },
-    logHasSlot() {
-      console.log(this.$slots.default);
-      return false;
     },
   },
 };
