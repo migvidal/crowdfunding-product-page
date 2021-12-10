@@ -38,7 +38,7 @@ export default {
   computed: {
     daysLeft() {
       let today = new Date();
-      let deadline = new Date("2022, 01, 09");
+      let deadline = new Date("2022, 03, 03");
       return Math.ceil((deadline - today) / this.MS_PER_DAY);
     },
   },
