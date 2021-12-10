@@ -1,5 +1,12 @@
 <template>
-  <nav class="menu">
+  <nav
+    :class="[
+      'menu',
+      {
+        'on-top': floatingMenuOpen,
+      },
+    ]"
+  >
     <div class="logo">
       <a href="#">
         <svg width="128" height="20" xmlns="http://www.w3.org/2000/svg">
@@ -81,12 +88,12 @@ a {
 
 <!-- Scoped styles -->
 <style lang="scss" scoped>
-nav.menu {
+.menu {
   display: flex;
   align-items: center;
   position: relative;
-  z-index: 1000;
   color: white;
+  background-image: linear-gradient(182deg, #00000030, transparent);
   padding: 0.1rem;
   & > * {
     margin: 1rem 10px !important;
@@ -116,7 +123,7 @@ nav.menu {
 }
 
 @media screen and (max-width: $mobile) {
-  nav.menu {
+  .menu {
     ul.section-links {
       display: none;
     }
@@ -124,5 +131,8 @@ nav.menu {
       display: block;
     }
   }
+}
+.on-top {
+  z-index: 1000;
 }
 </style>

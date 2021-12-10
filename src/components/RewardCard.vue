@@ -9,8 +9,10 @@
       },
     ]"
   >
-    <h2>{{ reward.name }}</h2>
-    <p>Pledge ${{ reward.minPledge }} or more</p>
+    <div class="flex-container">
+      <h2 class="reward-name">{{ reward.name }}</h2>
+      <p class="min-pledge">Pledge ${{ reward.minPledge }} or more</p>
+    </div>
     <p>{{ reward.description }}</p>
     <div class="flex-container">
       <p>
@@ -37,7 +39,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .rounded-card.reward {
   padding: 1rem;
   margin: 1rem 0;
@@ -50,5 +52,9 @@ export default {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+}
+.min-pledge {
+  font-weight: bold;
+  color: $moderate-cyan;
 }
 </style>
