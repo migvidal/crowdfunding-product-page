@@ -22,7 +22,7 @@
 import CfHorizontalSep from "./CfHorizontalSep.vue";
 export default {
   components: { CfHorizontalSep },
-  name: "FloatingNav",
+  name: "MobileMenu",
 };
 </script>
 

@@ -43,8 +43,6 @@ export default {
       this.$emit("modalclose");
     },
     handleSelectOption(rewardId) {
-      //_/this.$emit("selectoption");
-      //_/this.selectedPledge.id = rewardId;
       this.rewardsCopy.forEach((reward) => {
         if (reward.id === rewardId) {
           reward.selected = true;
@@ -52,11 +50,8 @@ export default {
       });
     },
     handleSubmit(rewardId, money) {
-      //_/this.selectedPledge.money = money;
-      //_/this.$emit('submitpledge', this.selectedPledge);
       this.rewardsCopy.forEach((reward) => {
         if (reward.id === rewardId) {
-          reward.units && reward.units--; // substract units if it has pledge
           this.$emit("submitpledge", reward.id, money); //emits submitted data
         }
       });

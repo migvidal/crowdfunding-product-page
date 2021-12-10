@@ -3,7 +3,7 @@
     :class="[
       'menu',
       {
-        'on-top': floatingMenuOpen,
+        'on-top': MobileMenuOpen,
       },
     ]"
   >
@@ -31,7 +31,7 @@
     </ul>
     <button class="hamburger-button" @click="handleHamburgerButton">
       <svg
-        v-show="!floatingMenuOpen"
+        v-show="!MobileMenuOpen"
         width="16"
         height="15"
         xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +42,7 @@
       </svg>
 
       <svg
-        v-show="floatingMenuOpen"
+        v-show="MobileMenuOpen"
         width="14"
         height="15"
         xmlns="http://www.w3.org/2000/svg"
@@ -57,15 +57,10 @@
 </template>
 
 <script>
-import CfModal from "./CfModal.vue";
-
 export default {
   name: "CfNav",
-  components: {
-    CfModal,
-  },
   props: {
-    floatingMenuOpen: Boolean,
+    MobileMenuOpen: Boolean,
   },
   methods: {
     handleHamburgerButton() {

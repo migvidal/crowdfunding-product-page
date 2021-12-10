@@ -1,7 +1,7 @@
 <template>
   <main class="home">
     <cf-nav
-      :floatingMenuOpen="mobileMenuVisible"
+      :MobileMenuOpen="mobileMenuVisible"
       @hamburgerclick="mobileMenuVisible = !mobileMenuVisible"
     />
     <!-- header -->
@@ -42,7 +42,7 @@
         @modalclose="handleModalClose"
       >
         <!-- floating menu -->
-        <floating-nav v-if="this.mobileMenuVisible" />
+        <mobile-menu v-if="this.mobileMenuVisible" />
         <!-- modal -->
         <pledge-modal
           v-if="this.pledgeModalVisible"
@@ -70,7 +70,7 @@ import SuccessModal from "./SuccessModal.vue";
 import CfModal from "./CfModal.vue";
 import CfNav from "./CfNav.vue";
 
-import FloatingNav from "./FloatingNav.vue";
+import MobileMenu from "./MobileMenu.vue";
 
 export default {
   name: "CrowdfundHome",
@@ -83,7 +83,7 @@ export default {
     CfModal,
     CfNav,
 
-    FloatingNav,
+    MobileMenu,
   },
 
   data() {
@@ -211,6 +211,8 @@ button {
   border-radius: $radius;
 }
 </style>
+
+<!-- Scoped styles -->
 <style lang="scss" scoped>
 .home {
   overflow: auto;
