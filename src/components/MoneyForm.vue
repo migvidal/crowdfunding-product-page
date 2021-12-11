@@ -1,7 +1,7 @@
 <template>
   <div class="enter-pledge">
-    <p>Enter your pledge</p>
-    <form @submit.prevent="handleSubmit">
+    <span>Enter your pledge</span>
+    <form class="enter-pledge-form" @submit.prevent="handleSubmit">
       <div class="input-group">
         <label for="money">$</label>
         <input
@@ -51,30 +51,33 @@ export default {
 .enter-pledge {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   border-top: 2px solid #eee;
-  form {
-    display: flex;
-    flex-wrap: wrap;
-    .input-group {
-      position: relative;
-      label {
-        position: relative;
-        left: 25px;
-        font-weight: bold;
-        color: $moderate-gray;
-      }
-      input[type="number"] {
-        background: none;
-        width: 150px;
-        padding: 10px;
-        padding-left: 40px;
+}
+.enter-pledge-form {
+  display: flex;
+  align-items: center;
+}
+.input-group {
+  position: relative;
+  margin-right: 10px;
+  label {
+    position: relative;
+    left: 25px;
+    font-weight: bold;
+    color: $moderate-gray;
+  }
+  input[type="number"] {
+    background: none;
+    width: 150px;
+    padding: 10px;
+    padding-left: 40px;
 
-        border: $card-border;
-        border-radius: 999px;
-        &:focus {
-          outline: 2px solid $dark-gray;
-        }
-      }
+    border: $card-border;
+    border-radius: 999px;
+    &:focus {
+      outline: 2px solid $dark-gray;
     }
   }
 }

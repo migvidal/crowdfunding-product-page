@@ -9,31 +9,33 @@
   >
     <!-- visible part -->
     <div class="radio-part">
-      <input
-        type="radio"
-        name="reward"
-        class="radio-button"
-        :disabled="reward.units === 0"
-        :checked="reward.selected"
-        :ref="inputID"
-        :id="inputID"
-        @change="handleChange"
-      />
-      <div class="info">
-        <label class="info-label" :for="inputID">
-          <span class="info-label-name">{{
-            reward.name || "Pledge with no reward"
-          }}</span>
-          <wbr />
-          <span class="info-label-pledge" v-if="reward.minPledge">
+      <div class="radio-and-labels" :for="inputID">
+        <input
+          type="radio"
+          name="reward"
+          class="radio-button"
+          :disabled="reward.units === 0"
+          :checked="reward.selected"
+          :ref="inputID"
+          :id="inputID"
+          @change="handleChange"
+        />
+        <div class="labels" :for="inputID">
+          <label class="info-header-label">
+            {{ reward.name || "Pledge with no reward" }}
+          </label>
+          <span class="info-header-pledge" v-if="reward.minPledge">
             Pledge ${{ reward.minPledge }} or more
           </span>
-        </label>
-        <p class="info-reward-description">{{ reward.description }}</p>
-        <p class="info-reward-units" v-if="reward.units">
-          <strong>{{ reward.units }} </strong> left
-        </p>
+          <span class="info-reward-units_right" v-if="reward.units">
+            <strong>{{ reward.units }} </strong> left
+          </span>
+        </div>
       </div>
+      <p class="info-reward-description">{{ reward.description }}</p>
+      <span class="info-reward-units_bottom" v-if="reward.units">
+        <strong>{{ reward.units }} </strong> left
+      </span>
     </div>
     <!-- hidden form -->
     <MoneyForm
@@ -87,15 +89,21 @@ export default {
   }
 }
 .radio-part {
+}
+.radio-and-labels {
+  display: flex;
+}
+.labels {
   display: flex;
   flex-wrap: wrap;
+  flex: 1;
 }
 .radio-button {
   appearance: none;
   width: 21px;
   height: 21px;
-  border-radius: 50%;
   margin-right: 15px;
+  border-radius: 50%;
   background-color: transparent;
   border: 5px solid white;
   box-shadow: 0 0 0 2px #eee;
@@ -112,20 +120,34 @@ export default {
   display: flex;
   flex-direction: column;
 }
-.info-label {
+.info-header {
+  display: flex;
   font-weight: $bolder;
   line-height: 1;
   vertical-align: middle;
-  & > span {
-    white-space: nowrap;
-  }
+  justify-content: space-between;
 }
-.info-label-name {
+.info-header-label {
   margin-right: 1rem;
 }
-.info-label-pledge {
+.info-reward-units_right {
+  flex: 1;
+  text-align: end;
+}
+.info-reward-units_bottom {
+  display: none;
+}
+.info-header-pledge {
   font-weight: $bolder;
   color: $moderate-cyan;
   margin-bottom: 0;
+}
+@media screen and (max-width: $tablet) {
+  .info-reward-units_right {
+    display: none;
+  }
+  .info-reward-units_bottom {
+    display: inline;
+  }
 }
 </style>
