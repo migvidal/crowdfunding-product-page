@@ -8,26 +8,32 @@
     ]"
   >
     <!-- visible part -->
-    <div class="radio-card">
+    <div class="radio-part">
       <input
         type="radio"
         name="reward"
+        class="radio-button"
         :disabled="reward.units === 0"
         :checked="reward.selected"
         :ref="inputID"
         :id="inputID"
         @change="handleChange"
       />
-      <label :for="inputID">
-        {{ reward.name || "Pledge with no reward" }}
-        <p class="min-pledge" v-if="reward.minPledge">
-          Pledge ${{ reward.minPledge }} or more
+      <div class="info">
+        <label class="info-label" :for="inputID">
+          <span class="info-label-name">{{
+            reward.name || "Pledge with no reward"
+          }}</span>
+          <wbr />
+          <span class="info-label-pledge" v-if="reward.minPledge">
+            Pledge ${{ reward.minPledge }} or more
+          </span>
+        </label>
+        <p class="info-reward-description">{{ reward.description }}</p>
+        <p class="info-reward-units" v-if="reward.units">
+          <strong>{{ reward.units }} </strong> left
         </p>
-      </label>
-      <p>{{ reward.description }}</p>
-      <p v-if="reward.units">
-        <strong>{{ reward.units }} </strong> left
-      </p>
+      </div>
     </div>
     <!-- hidden form -->
     <MoneyForm
@@ -79,36 +85,47 @@ export default {
   &.selected {
     border-color: $moderate-cyan;
   }
-  .radio-card {
-    /* custom radio */
-    input[type="radio"] {
-      appearance: none;
-      width: 21px;
-      height: 21px;
-      border-radius: 50%;
-      margin-right: 15px;
-      background-color: transparent;
-      border: 5px solid white;
-      box-shadow: 0 0 0 2px #eee;
-      cursor: pointer;
-      &:disabled {
-        cursor: not-allowed;
-      }
-    }
-    label {
-      display: inline-block;
-      font-weight: $bolder;
-      line-height: 1;
-      vertical-align: middle;
-    }
-    .min-pledge {
-      font-weight: $bold;
-      color: $moderate-cyan;
-      margin-bottom: 0;
-    }
-    input[type="radio"]:checked {
-      background-color: $moderate-cyan;
-    }
+}
+.radio-part {
+  display: flex;
+  flex-wrap: wrap;
+}
+.radio-button {
+  appearance: none;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  margin-right: 15px;
+  background-color: transparent;
+  border: 5px solid white;
+  box-shadow: 0 0 0 2px #eee;
+  cursor: pointer;
+  &:checked {
+    background-color: $moderate-cyan;
   }
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.info-label {
+  font-weight: $bolder;
+  line-height: 1;
+  vertical-align: middle;
+  & > span {
+    white-space: nowrap;
+  }
+}
+.info-label-name {
+  margin-right: 1rem;
+}
+.info-label-pledge {
+  font-weight: $bolder;
+  color: $moderate-cyan;
+  margin-bottom: 0;
 }
 </style>
