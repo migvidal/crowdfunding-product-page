@@ -20,7 +20,9 @@
       />
       <label :for="inputID">
         {{ reward.name || "Pledge with no reward" }}
-        <p v-if="reward.minPledge">Pledge ${{ reward.minPledge }} or more</p>
+        <p class="min-pledge" v-if="reward.minPledge">
+          Pledge ${{ reward.minPledge }} or more
+        </p>
       </label>
       <p>{{ reward.description }}</p>
       <p v-if="reward.units">
@@ -98,13 +100,11 @@ export default {
       font-weight: $bolder;
       line-height: 1;
       vertical-align: middle;
-      //      cursor: pointer;
-
-      p {
-        font-weight: $bold;
-        color: $moderate-cyan;
-        margin-bottom: 0;
-      }
+    }
+    .min-pledge {
+      font-weight: $bold;
+      color: $moderate-cyan;
+      margin-bottom: 0;
     }
     input[type="radio"]:checked {
       background-color: $moderate-cyan;
