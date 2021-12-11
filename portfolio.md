@@ -14,6 +14,16 @@ Front-end para una web ficticia de _crowdfunding_. Realizado con Vue.js (vanilla
 
 <hr>
 
+## Acordeón FAQ
+
+Sección de preguntas frecuentes responsive con una distribución compleja de imágenes y fondo. Utiliza la etiqueta semántica _details_.
+
+[![VidalWP](assets/images/projects/faq-accordion-poster.png)](https://migvidal.github.io/faq-accordion-card-main/)
+
+[<i class="fab fa-github"></i> GitHub](https://github.com/migvidal/faq-accordion-card-main) · [<i class="fas fa-globe"></i> Web en vivo](https://migvidal.github.io/faq-accordion-card-main/)
+
+<hr>
+
 ## VidalWP
 
 Tema WordPress básico y elegante. Estilos mediante Bootstrap y Sass.
