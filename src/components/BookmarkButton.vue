@@ -48,6 +48,9 @@ export default {
   padding: 0;
   max-height: 56px; // fit the svg snugly
   z-index: 1;
+  &:hover {
+    filter: brightness(55%);
+  }
   svg {
     vertical-align: middle;
     circle {
