@@ -1,6 +1,7 @@
 /* Breakpoints */
 $mobile: 375px;
 $mobile-landscape: 480px;
+$small-tablet: 540px;
 $tablet: 750px;
 $desktop: 1440px;
 
@@ -14,7 +15,7 @@ $dark-cyan: hsl(176, 72%, 28%);
 
 $black: hsl(0, 0%, 0%);
 $dark-gray: hsl(0, 0%, 48%);
-$light-gray: #eee;
+$light-gray: #eee;//new
 $moderate-gray: rgb(168, 168, 168);
 
 /* Typography */
@@ -31,6 +32,6 @@ $bold: 500;
 $regular: 400;
 
 /* Borders */
-$card-border: 2px solid #eee;
+$card-border: 2px solid $light-gray;
 $radius: 12px;
 

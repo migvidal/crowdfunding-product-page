@@ -63,7 +63,7 @@ export default {
 <style lang="scss" scoped>
 .modal-inner {
   max-width: 700px;
-  padding: 2rem;
+  padding: 20px;
 }
 .modal-close-button {
   float: right;

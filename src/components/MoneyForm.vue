@@ -1,9 +1,9 @@
 <template>
   <div class="enter-pledge">
-    <span>Enter your pledge</span>
+    <label class="enter-pledge-label" for="money">Enter your pledge</label>
     <form class="enter-pledge-form" @submit.prevent="handleSubmit">
       <div class="input-group">
-        <label for="money">$</label>
+        <span class="dollar-sign">$</span>
         <input
           v-model="this.money"
           type="number"
@@ -59,18 +59,23 @@ export default {
   display: flex;
   align-items: center;
 }
+.enter-pledge-label {
+  margin: 0.5rem 0;
+  flex: 1;
+}
 .input-group {
   position: relative;
   margin-right: 10px;
-  label {
-    position: relative;
-    left: 25px;
+  .dollar-sign {
+    position: absolute;
+    left: 20px;
+    top: 12px;
     font-weight: bold;
     color: $moderate-gray;
   }
   input[type="number"] {
     background: none;
-    width: 150px;
+    max-width: 150px;
     padding: 10px;
     padding-left: 40px;
 
@@ -79,6 +84,15 @@ export default {
     &:focus {
       outline: 2px solid $dark-gray;
     }
+  }
+}
+@media screen and (max-width: $mobile-landscape) {
+  .enter-pledge {
+    justify-content: space-evenly;
+  }
+  .enter-pledge-label {
+    text-align: center;
+    flex-basis: 100%;
   }
 }
 </style>

@@ -9,7 +9,7 @@
   >
     <!-- visible part -->
     <div class="radio-part">
-      <div class="radio-and-labels" :for="inputID">
+      <div class="radio-header" :for="inputID">
         <input
           type="radio"
           name="reward"
@@ -21,21 +21,23 @@
           @change="handleChange"
         />
         <div class="labels" :for="inputID">
-          <label class="info-header-label">
+          <label class="label">
             {{ reward.name || "Pledge with no reward" }}
           </label>
-          <span class="info-header-pledge" v-if="reward.minPledge">
+          <span class="pledge" v-if="reward.minPledge">
             Pledge ${{ reward.minPledge }} or more
           </span>
-          <span class="info-reward-units_right" v-if="reward.units">
+          <span class="reward-units_right" v-if="reward.units">
             <strong>{{ reward.units }} </strong> left
           </span>
         </div>
       </div>
-      <p class="info-reward-description">{{ reward.description }}</p>
-      <span class="info-reward-units_bottom" v-if="reward.units">
-        <strong>{{ reward.units }} </strong> left
-      </span>
+      <div class="info">
+        <p class="info-reward-description">{{ reward.description }}</p>
+        <span class="info-reward-units_bottom" v-if="reward.units">
+          <strong>{{ reward.units }} </strong> left
+        </span>
+      </div>
     </div>
     <!-- hidden form -->
     <MoneyForm
@@ -88,9 +90,8 @@ export default {
     border-color: $moderate-cyan;
   }
 }
-.radio-part {
-}
-.radio-and-labels {
+
+.radio-header {
   display: flex;
 }
 .labels {
@@ -115,10 +116,12 @@ export default {
     cursor: not-allowed;
   }
 }
+
 .info {
   flex: 1;
   display: flex;
   flex-direction: column;
+  margin-left: 41px;
 }
 .info-header {
   display: flex;
@@ -127,27 +130,31 @@ export default {
   vertical-align: middle;
   justify-content: space-between;
 }
-.info-header-label {
+.label {
   margin-right: 1rem;
 }
-.info-reward-units_right {
+.reward-units_right {
+  display: inline;
   flex: 1;
   text-align: end;
 }
-.info-reward-units_bottom {
+.reward-units_bottom {
   display: none;
 }
-.info-header-pledge {
+.pledge {
   font-weight: $bolder;
   color: $moderate-cyan;
   margin-bottom: 0;
 }
 @media screen and (max-width: $tablet) {
-  .info-reward-units_right {
+  .info {
+    margin-left: initial;
+  }
+  .reward-units_right {
     display: none;
   }
-  .info-reward-units_bottom {
-    display: inline;
+  .reward-units_bottom {
+    display: initial;
   }
 }
 </style>
