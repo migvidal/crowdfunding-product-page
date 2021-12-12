@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: "CfHorizontalSep",
+  name: "CfVerticalSep",
 };
 </script>
 

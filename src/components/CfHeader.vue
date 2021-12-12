@@ -21,7 +21,7 @@ import BookmarkButton from "./BookmarkButton.vue";
 export default {
   components: { BookmarkButton },
   name: "CfHeader",
-
+  emits: ["backprojectclick", "bookmarkclick"],
   props: {
     bookmarked: {
       type: Boolean,

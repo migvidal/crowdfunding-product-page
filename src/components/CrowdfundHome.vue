@@ -1,7 +1,7 @@
 <template>
   <main class="home">
     <cf-nav
-      :MobileMenuOpen="mobileMenuVisible"
+      :mobileMenuOpen="mobileMenuVisible"
       @hamburgerclick="mobileMenuVisible = !mobileMenuVisible"
     />
     <!-- header -->

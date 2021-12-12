@@ -20,8 +20,8 @@
           :id="inputID"
           @change="handleChange"
         />
-        <div class="labels" :for="inputID">
-          <label class="label">
+        <div class="labels">
+          <label class="label" :for="inputID">
             {{ reward.name || "Pledge with no reward" }}
           </label>
           <span class="pledge" v-if="reward.minPledge">
@@ -52,7 +52,7 @@
 import MoneyForm from "./MoneyForm.vue";
 
 export default {
-  name: "RewardRadio",
+  name: "PledgeModalRadio",
   components: {
     MoneyForm,
   },
@@ -73,7 +73,6 @@ export default {
       return "reward-" + this.reward.id;
     },
   },
-  created() {},
 };
 </script>
 
@@ -94,11 +93,6 @@ export default {
 .radio-header {
   display: flex;
 }
-.labels {
-  display: flex;
-  flex-wrap: wrap;
-  flex: 1;
-}
 .radio-button {
   appearance: none;
   width: 21px;
@@ -116,22 +110,26 @@ export default {
     cursor: not-allowed;
   }
 }
+.labels {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+}
+.label {
+  margin-right: 1rem;
+  font-weight: $bolder;
+}
+.pledge {
+  color: $moderate-cyan;
+  margin-bottom: 0;
+  font-weight: $bolder;
+}
 
 .info {
   flex: 1;
   display: flex;
   flex-direction: column;
   margin-left: 41px;
-}
-.info-header {
-  display: flex;
-  font-weight: $bolder;
-  line-height: 1;
-  vertical-align: middle;
-  justify-content: space-between;
-}
-.label {
-  margin-right: 1rem;
 }
 .reward-units_right {
   display: inline;
@@ -141,11 +139,7 @@ export default {
 .reward-units_bottom {
   display: none;
 }
-.pledge {
-  font-weight: $bolder;
-  color: $moderate-cyan;
-  margin-bottom: 0;
-}
+
 @media screen and (max-width: $tablet) {
   .info {
     margin-left: initial;

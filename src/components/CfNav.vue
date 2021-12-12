@@ -3,7 +3,7 @@
     :class="[
       'menu',
       {
-        'on-top': MobileMenuOpen,
+        'on-top': mobileMenuOpen,
       },
     ]"
   >
@@ -31,7 +31,7 @@
     </ul>
     <button class="hamburger-button" @click="handleHamburgerButton">
       <svg
-        v-show="!MobileMenuOpen"
+        v-show="!mobileMenuOpen"
         width="16"
         height="15"
         xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +42,7 @@
       </svg>
 
       <svg
-        v-show="MobileMenuOpen"
+        v-show="mobileMenuOpen"
         width="14"
         height="15"
         xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +60,7 @@
 export default {
   name: "CfNav",
   props: {
-    MobileMenuOpen: Boolean,
+    mobileMenuOpen: Boolean,
   },
   methods: {
     handleHamburgerButton() {

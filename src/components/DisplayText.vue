@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "BigText",
+  name: "DisplayText",
   props: {
     number: Number,
   },
