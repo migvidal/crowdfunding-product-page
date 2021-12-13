@@ -116,6 +116,13 @@ footer {
   }
 }
 
+/* Bottom nav */
+.bottom-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;

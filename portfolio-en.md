@@ -1,6 +1,7 @@
 ---
 layout: miguel
 page: portfolio
+language: en
 title: My projects
 ---
 
@@ -42,9 +43,3 @@ A place to explore and upload 3d models. PHP based web app. Final project for my
 [![Dimensional](assets/images/projects/dimensional-poster.png)](https://github.com/migvidal/dimensional)
 
 [<i class="fab fa-github"></i> GitHub](https://github.com/migvidal/dimensional)
-
-<hr>
-
-🇪🇸 **[Ver en Español](/portfolio)**
-
-**[&#8592; Go home](./)**
