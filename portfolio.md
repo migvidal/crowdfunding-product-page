@@ -6,7 +6,7 @@ title: Mis proyectos
 
 ## Crowdfund dashboard - Vue
 
-Front-end para una web ficticia de _crowdfunding_. Realizado con Vue.js (vanilla). Responsive, con ventanas modales, formularios y gestión de estado. Proyecto de FrontEndMentor.
+Front-end para una web ficticia de _crowdfunding_. Realizado con Vue.js (vanilla). Responsive, con ventanas modales, formularios y gestión de estado. Diseñado por FrontEndMentor.
 
 [![VidalWP](assets/images/projects/crowdfund-poster.png)](https://crowdfunding-two.vercel.app/)
 
@@ -16,7 +16,7 @@ Front-end para una web ficticia de _crowdfunding_. Realizado con Vue.js (vanilla
 
 ## Acordeón FAQ
 
-Sección de preguntas frecuentes responsive con una distribución compleja de imágenes y fondo. Utiliza la etiqueta semántica _details_.
+Sección de preguntas frecuentes responsive con una distribución compleja de imágenes y fondo. Utiliza la etiqueta semántica _details_ customizada.
 
 [![VidalWP](assets/images/projects/faq-accordion-poster.png)](https://migvidal.github.io/faq-accordion-card-main/)
 
