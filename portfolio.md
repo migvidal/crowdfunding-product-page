@@ -44,6 +44,6 @@ Galería online para explorar y subir modelos 3d. App web basada en PHP. Proyect
 
 <hr>
 
-**[View in English](/portfolio-en)**
+🇬🇧 **[View in English](/portfolio-en)**
 
-**[&#8592; Volver](./)**
+**[&#8592; Volver al inicio](./)**

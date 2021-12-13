@@ -45,6 +45,6 @@ A place to explore and upload 3d models. PHP based web app. Final project for my
 
 <hr>
 
-**[Ver en Español](/portfolio)**
+🇪🇸 **[Ver en Español](/portfolio)**
 
-**[&#8592; Go back](./)**
+**[&#8592; Go home](./)**
