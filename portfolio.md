@@ -43,4 +43,3 @@ Galería online para explorar y subir modelos 3d. App web basada en PHP. Proyect
 
 [<i class="fab fa-github"></i> GitHub](https://github.com/migvidal/dimensional)
 
-<hr>

@@ -22,7 +22,7 @@
 
         <div class="top">
           <div class="separator large gradient-bg"></div>
-          <a class="top-link" href="/index.html">
+          <a class="logo-link" href="/index.html">
             <img class="top-logo" src="/assets/images/miguelogo.svg" alt="Miguel Vidal">
           </a>
           <div class="separator small gradient-bg"></div>
@@ -45,6 +45,8 @@
         </main>
         {% endif %}
 
+        <hr>
+
         <nav class="bottom-nav">
           {% if page.language == "es" %}
           <a href="/.">&#8592; Volver al inicio</a>
@@ -60,13 +62,14 @@
 
           {% endif %}
         </nav>
- 
-        <footer>
-          
-        </footer>
-      
 
-      
+        {% if page.page != "portfolio" %}
+        <footer>
+          <a class="logo-link" href="/index.html">
+            <img class="bottom-logo" src="/assets/images/miguelogo.svg" alt="Miguel Vidal">
+          </a>          
+        </footer>
+        {% endif %}
 
       </div>
     </div>
