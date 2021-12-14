@@ -5,14 +5,13 @@ title: Soy Miguel Vidal
 ---
 
 Desarrollador web front-end (técnico superior).
-Con experiencia en <span class="js-color">JavaScript</span> y <span class="wp-color">Wordpress</span>.
 Aficionado al diseño 🌐 web y de interfaces, y siempre al tanto de nuevas tendencias.
 
-He trabajado de prácticas en la agencia Fiebre™.
+He trabajado de prácticas en la agencia Fiebre™ con <span class="js-color">JavaScript</span>, <span class="wp-color">Wordpress</span> y Shopify.
 
-Herramientas que utilizo: <span class="sass-color">Sass</span>, <span class="bootstrap-color">Bootstrap</span>, <span class="figma-color">Figma</span> y <span class="jekyll-color">Jekyll</span>.
+Utilizo las siguientes herramientas: <span class="vue-color">Vue.js</span>, <span class="sass-color">Sass</span>, <span class="bootstrap-color">Bootstrap</span> y <span class="figma-color">Figma Design</span>.
 
-Actualmente aprendiendo <span class="vue-color">Vue.js</span> y haciendo proyectos.
+Actualmente aprendiendo <span class="react-color">React</span> y haciendo proyectos.
 <br>
 
 

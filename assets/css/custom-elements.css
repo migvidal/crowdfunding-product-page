@@ -98,6 +98,9 @@ footer {
 .vue-color {
   color: #3fb27f;
 }
+.react-color {
+  color: #5ed3f3;
+}
 
 .separator {
   display: inline-block;
