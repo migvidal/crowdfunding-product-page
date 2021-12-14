@@ -34,7 +34,7 @@
       </div>
       <div class="info">
         <p class="info-reward-description">{{ reward.description }}</p>
-        <span class="info-reward-units_bottom" v-if="reward.units">
+        <span class="reward-units_bottom" v-if="reward.units">
           <strong>{{ reward.units }} </strong> left
         </span>
       </div>
@@ -148,7 +148,7 @@ export default {
     display: none;
   }
   .reward-units_bottom {
-    display: initial;
+    display: inline;
   }
 }
 </style>
