@@ -72,6 +72,8 @@ import CfNav from "./CfNav.vue";
 
 import MobileMenu from "./MobileMenu.vue";
 
+import CfService from '@/services/CfService.js';
+
 export default {
   name: "CrowdfundHome",
   components: {
@@ -95,7 +97,8 @@ export default {
       backerCount: 0,
       totalRaised: 0,
       bookmarked: false,
-      rewards: [
+      rewards: null,
+      /* rewards: [
         {
           id: 0,
           description:
@@ -129,7 +132,7 @@ export default {
           minPledge: 100,
           selected: false,
         },
-      ],
+      ], */
       mobileMenuVisible: false,
       pledgeModalVisible: false,
       successModalVisible: false,
