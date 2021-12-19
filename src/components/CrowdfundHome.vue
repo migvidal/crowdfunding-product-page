@@ -72,7 +72,7 @@ import CfNav from "./CfNav.vue";
 
 import MobileMenu from "./MobileMenu.vue";
 
-import CfService from '@/services/CfService.js';
+import CfService from "/services/CfService.js";
 
 export default {
   name: "CrowdfundHome",
@@ -138,6 +138,7 @@ export default {
       successModalVisible: false,
     };
   },
+
   methods: {
     onResize() {
       let mediaQuery = "screen and (max-width: 375px)";
@@ -192,6 +193,11 @@ export default {
       body.classList.remove("no-scroll");
       if (!scrollable) body.classList.add("no-scroll");
     },
+  },
+  created() {
+    CfService.getRewards()
+      .then((response) => (this.rewards = response.data))
+      .catch((error) => console.log(error));
   },
   mounted() {
     window.addEventListener("resize", this.onResize);
