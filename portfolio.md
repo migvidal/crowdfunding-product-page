@@ -5,13 +5,23 @@ language: es
 title: Mis proyectos
 ---
 
+## Micro-chat - React + Firestore
+
+App de chat con Firestore como back-end. Utiliza React con Firebase Hooks.
+
+[![VidalWP](assets/images/projects/micro-chat%20shot.png)](https://migvidal-micro-chat.vercel.app/)
+
+[<i class="fab fa-github"></i> GitHub](https://github.com/migvidal/migvidal-micro-chat) · [<i class="fas fa-globe"></i> Web en vivo](https://migvidal-micro-chat.vercel.app/)
+
+<hr>
+
 ## Crowdfund dashboard - Vue
 
 Front-end para una web ficticia de _crowdfunding_. Realizado con Vue.js (vanilla). Responsive, con ventanas modales, formularios y gestión de estado. Diseñado por FrontEndMentor.
 
 [![VidalWP](assets/images/projects/crowdfund-poster.png)](https://crowdfunding-two.vercel.app/)
 
-[<i class="fab fa-github"></i> GitHub](https://github.com/migvidal/vidalwp) · [<i class="fas fa-globe"></i> Web en vivo](https://crowdfunding-two.vercel.app/)
+[<i class="fab fa-github"></i> GitHub](https://github.com/migvidal/crowdfunding-product-page) · [<i class="fas fa-globe"></i> Web en vivo](https://crowdfunding-two.vercel.app/)
 
 <hr>
 
